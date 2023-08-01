@@ -1,0 +1,33 @@
+@import "vars";
+@import "fonts";
+@import "settings";
+
+//Страницы
+@import "pages/home";
+@import "pages/create-event";
+@import "pages/registration";
+@import "pages/profile-organizer";
+
+
+//Медиа
+
+
+//Компоненты
+@import "./components/main-menu";
+@import "./components/selects";
+@import "./components/pagination";
+@import "./components/navigation-row";
+@import "./components/big-form";
+
+
+@import "./components/header";
+@import "./components/footer";
+
+
+
+
+
+
+
+
+
