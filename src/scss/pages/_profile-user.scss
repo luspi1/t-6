@@ -1,4 +1,4 @@
-.profile-organizer {
+.profile-user {
   .event {
     margin-bottom: 70px;
 
@@ -26,6 +26,22 @@
           font-size: 13px;
           font-weight: 600;
           line-height: normal;
+        }
+
+        &.w100 {
+          width: 100%;
+
+          .custom-checkbox {
+            margin-top: 10px;
+
+            > label {
+              margin-bottom: 0;
+            }
+          }
+
+          .big-form__wrapper.phone {
+            width: 204px;
+          }
         }
 
         &.password {
@@ -229,6 +245,7 @@
             margin-top: auto;
             margin-bottom: 9px;
           }
+
         }
       }
 
