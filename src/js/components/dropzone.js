@@ -30,7 +30,7 @@ const organizerProfileLogo = document.querySelector('#profile-logo')
 if (organizerProfileLogo) {
     let organizerLogoDropzone = new Dropzone(organizerProfileLogo, {
         maxFilesize: 5,
-        url: '/include/ajax/upload_image.php',
+        url: './data/test.txt',
         maxFiles: 1,
         thumbnailWidth: 108,
         thumbnailHeight: 108,
@@ -40,6 +40,11 @@ if (organizerProfileLogo) {
         clickable: '.big-form__btn-add-logo',
         previewsContainer: '.big-form__dropzone-previews'
     })
+
+  organizerLogoDropzone.on("success", function (file, response) {
+    // 1) получить текущее время
+    // 2) в необходимом формате вывести это время на страницу
+  })
 
 }
 
