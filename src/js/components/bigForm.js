@@ -41,6 +41,36 @@ if (commandsCheckbox) {
     showByCheckbox(commandsCheckbox, '.big-form__commands-wrapper')
 }
 
+//стр tickets
+
+const tickets = document.querySelector('.tickets')
+const showTicketsBlock = () => {
+    const reusableCheckboxes = document.querySelectorAll('[data-reusable]')
+    reusableCheckboxes.forEach(checkbox => {
+        showByCheckbox(checkbox, '.big-form__tickets-show')
+    })
+
+    const paidTickets = document.querySelectorAll('[data-paidTicket]')
+    paidTickets.forEach(item => {
+        item.addEventListener('change', ({currentTarget}) => {
+            const ticketRefund = currentTarget.closest('.big-form__item')
+                .querySelector('[data-ticketRefund]')
+            if (currentTarget.checked === true) {
+                ticketRefund.disabled = ''
+            } else {
+                ticketRefund.checked = false
+                ticketRefund.disabled = true
+            }
+        })
+    })
+}
+
+
+if (tickets) {
+    showTicketsBlock()
+}
+
+
 //  активность checkboxes
 const showCheckboxes = document.querySelectorAll('input[data-show-checkbox]')
 
@@ -107,6 +137,9 @@ if (addToListBtns) {
             limitationChangeableElements(targetChangeableList, addBtn)
             updateChangeableListId(targetChangeableList)
             initSelects()
+            if (tickets) {
+                showTicketsBlock()
+            }
         })
     })
 }

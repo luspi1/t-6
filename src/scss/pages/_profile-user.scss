@@ -170,16 +170,32 @@
             top: 15px;
           }
 
+          .dz-date {
+            color: #91969A;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: normal;
+            order: 2;
+          }
+
           .dz-details {
             display: flex !important;
-            flex-direction: column-reverse;
+            flex-direction: column;
             margin-right: 8px;
+            margin-bottom: 0;
           }
 
           .dz-size {
+            order: 3;
+            height: max-content;
+            line-height: 1.1;
+            margin-bottom: 5px;
+
             span {
+              display: inline-block;
               color: #91969A;
               font-size: 11px;
+              line-height: 1.1;
 
               strong {
                 font-weight: 400;
@@ -194,22 +210,21 @@
           }
 
           .dz-filename {
+            order: 1;
             span {
               display: block;
-              width: 111px;
+              width: 150px;
               white-space: nowrap;
               overflow-x: hidden;
               text-overflow: ellipsis;
               color: $blue;
             }
           }
-
           .dz-remove {
             font-size: 13px;
             line-height: 2;
             color: black;
           }
-
           .big-form__btn-add-logo {
             pointer-events: none;
           }
@@ -236,7 +251,7 @@
       }
 
       &__dropzone-right {
-        max-width: 210px;
+        max-width: 225px;
         display: flex;
         flex-direction: column;
 

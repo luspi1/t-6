@@ -194,7 +194,7 @@
 								<input checked type="checkbox" name="openRegVisitor" id="openRegVisitor" data-show-list>
 								<label for="openRegVisitor">Включить регистрацию посетителей</label>
 							</div>
-							<ul>
+							<ul data-list="changeable" data-changeable-id="true">
 								<li>
 									<ul class="big-form__list">
 										<li><h3>Билет 1</h3></li>
@@ -211,7 +211,7 @@
 										<li class="big-form__item">
 											<div class="custom-checkbox">
 												<input type="checkbox" name="paidTicket"
-													   id="paidTicket">
+													   id="paidTicket" data-paidTicket>
 												<label for="paidTicket">Платный билет</label>
 											</div>
 											<div class="custom-checkbox">
@@ -226,7 +226,7 @@
 											</div>
 											<div class="custom-checkbox">
 												<input type="checkbox" name="ticketRefund"
-													   id="ticketRefund">
+													   id="ticketRefund" data-ticketRefund disabled>
 												<label for="ticketRefund">Возможен возврат билета</label>
 											</div>
 										</li>
@@ -313,18 +313,18 @@
 												</li>
 											</ul>
 										</li>
-										<li class="big-form__item border-bottom column">
+										<li class="big-form__item border-bottom column big-form__tickets-show">
 											<h4>Количество входов *</h4>
 											<div class="custom-checkbox">
 												<input type="checkbox" name="reusableEntry"
-													   id="reusableEntry">
+													   id="reusableEntry" data-reusable>
 												<label for="reusableEntry">Многоразовый вход</label>
 											</div>
 											<div class="big-form__entry-wrapper">
 												<ul class="big-form__entry-list">
 													<li class="big-form__entry-item">
 														<input type="radio" name="reusable" value="ticketUnlimited"
-															   id="ticketUnlimited">
+															   id="ticketUnlimited" checked>
 														<label for="ticketUnlimited">
 															Многоразовый безлимитный
 														</label>
@@ -380,94 +380,89 @@
 												<p>Это описание — публичное, то есть — видно вообще всем.</p>
 											</div>
 										</li>
-										<li class="big-form__item border-bottom column">
+										<li class="big-form__item border-bottom column big-form__tickets-show">
 											<h4>Автопропуск *</h4>
 											<div class="custom-checkbox">
 												<input type="checkbox" name="autoPass"
-													   id="autoPass">
+													   id="autoPass" data-reusable>
 												<label for="autoPass">Включить автопропуск</label>
 											</div>
-
 											<h5 class="big-form__car-title">Локации для транспорта *</h5>
-											<div class="big-form__entry-wrapper">
+											<div class="big-form__entry-wrapper pt0">
 												<ul class="big-form__locations">
 													<li class="custom-checkbox">
-														<input type="checkbox" name="locationsVisitors"
-															   id="locationsVisitors">
-														<label for="locationsVisitors">Все локации для посетителей</label>
+														<input type="checkbox" name="carLocationsVisitors"
+															   id="carLocationsVisitors">
+														<label for="carLocationsVisitors">Все локации для
+															посетителей</label>
 													</li>
 													<li class="custom-checkbox">
-														<input type="checkbox" name="bigField"
-															   id="bigField">
-														<label for="bigField">Большое поле</label>
+														<input type="checkbox" name="bigParking"
+															   id="bigParking">
+														<label for="bigParking">Большая парковка</label>
 													</li>
 													<li class="custom-checkbox">
-														<input type="checkbox" name="tribunes"
-															   id="tribunes">
-														<label for="tribunes">Трибуны</label>
-													</li>
-													<li class="custom-checkbox">
-														<input type="checkbox" name="cafe"
-															   id="cafe">
-														<label for="cafe">Кафе</label>
-													</li>
-													<li class="custom-checkbox">
-														<input type="checkbox" name="vip"
-															   id="vip">
-														<label for="vip">Ложа для почетных гостей</label>
+														<input type="checkbox" name="refueling"
+															   id="refueling">
+														<label for="refueling">Заправка</label>
 													</li>
 												</ul>
 												<ul class="big-form__locations">
 													<li class="custom-checkbox">
-														<input type="checkbox" name="locationsMembers"
-															   id="locationsMembers">
-														<label for="locationsMembers">Все локации для участников</label>
+														<input type="checkbox" name="carLocationsMembers"
+															   id="carLocationsMembers">
+														<label for="carLocationsMembers">Все локации для
+															участников</label>
 													</li>
 													<li class="custom-checkbox">
-														<input type="checkbox" name="cloakroom"
-															   id="cloakroom">
-														<label for="cloakroom">Раздевалка спортсменов</label>
+														<input type="checkbox" name="secondEntry"
+															   id="secondEntry">
+														<label for="secondEntry">Второй въезд</label>
 													</li>
-													<li class="custom-checkbox">
-														<input type="checkbox" name="canteen"
-															   id="canteen">
-														<label for="canteen">Столовая для спортсменов</label>
-													</li>
-													<li class="custom-checkbox">
-														<input type="checkbox" name="coaching"
-															   id="coaching">
-														<label for="coaching">Тренерская</label>
-													</li>
-
 												</ul>
 												<ul class="big-form__locations">
 													<li class="custom-checkbox">
-														<input type="checkbox" name="locationsOrganizer"
-															   id="locationsOrganizer">
-														<label for="locationsOrganizer">Все локации для
+														<input type="checkbox" name="carLocationsOrganizer"
+															   id="carLocationsOrganizer">
+														<label for="carLocationsOrganizer">Все локации для
 															организаторов</label>
 													</li>
 													<li class="custom-checkbox">
-														<input type="checkbox" name="judicial"
-															   id="judicial">
-														<label for="judicial">Судейская</label>
+														<input type="checkbox" name="parkingOrg"
+															   id="parkingOrg">
+														<label for="parkingOrg">Стоянка администрации</label>
 													</li>
 													<li class="custom-checkbox">
-														<input type="checkbox" name="office"
-															   id="office">
-														<label for="office">Офис площадки</label>
+														<input type="checkbox" name="garage"
+															   id="garage">
+														<label for="garage">Гараж</label>
 													</li>
 													<li class="custom-checkbox">
-														<input type="checkbox" name="closet"
-															   id="closet">
-														<label for="closet">Подтрибунное помещение</label>
+														<input type="checkbox" name="third"
+															   id="third">
+														<label for="third">Третий въезд</label>
 													</li>
 												</ul>
 											</div>
 										</li>
+										<li>
+											<button class="big-form__btn-ticket save">Сохранить билет</button>
+										</li>
 									</ul>
 								</li>
 							</ul>
+							<button class="big-form__btn-ticket big-form__btn-ticket-add" type="button"
+									data-template="new-ticket"
+									data-btn="add">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+									 xmlns="http://www.w3.org/2000/svg">
+									<rect width="15" height="0.7" transform="matrix(0 -1 0.999995 0.00305792 7 15)"
+										  fill="black"/>
+									<path d="M15.002 8L0.00195408 8L-0.000186465 7.3L14.9998 7.3L15.002 8Z"
+										  fill="black"/>
+								</svg>
+								Добавить еще один тип билета
+							</button>
 						</div>
 
 						<div class="big-form__buttons">
@@ -482,24 +477,263 @@
 	</main>
 	@include('partials/footer.html')
 </div>
-<template id="command-item">
-	<li class="big-form__command command-dropzone" data-changeable-id="true">
-		<div class="big-form__wrapper">
-			<label>Название стороны</label>
-			<input name="nameCommand" placeholder="ввести название"
-				   type="text">
-		</div>
-		<div class="custom-select">
-			<select name="colorCommand">
-				<option value="0">выбрать цвет</option>
-				<option value="1">цвет 1</option>
-				<option value="2">цвет 2</option>
-			</select>
-		</div>
-		<p>или</p>
-		<button class="big-form__command-btn-dropzone" type="button">загрузить пиктограмму
-		</button>
-		<button class="big-form__btn-delete-command" type="button" data-btn="delete">
+
+<template id="new-ticket">
+	<li data-changeable-id="true">
+		<ul class="big-form__list">
+			<li><h3>Билет 2</h3></li>
+			<li class="big-form__item">
+				<div class="big-form__wrapper">
+					<label>Название билета *</label>
+					<input name="ticketName1" type="text" required>
+				</div>
+				<div class="big-form__wrapper quantity">
+					<label>Билетов, не более</label>
+					<input name="ticketQuantity1" type="number">
+				</div>
+			</li>
+			<li class="big-form__item">
+				<div class="custom-checkbox">
+					<input type="checkbox" name="paidTicket1"
+						   id="paidTicket1" data-paidTicket>
+					<label for="paidTicket1">Платный билет</label>
+				</div>
+				<div class="custom-checkbox">
+					<input type="checkbox" name="fastReg1"
+						   id="fastReg1">
+					<label for="fastReg1">Быстрая регистрация</label>
+				</div>
+				<div class="custom-checkbox">
+					<input type="checkbox" name="personalPurchase1"
+						   id="personalPurchase1">
+					<label for="personalPurchase1">Самостоятельная покупка</label>
+				</div>
+				<div class="custom-checkbox">
+					<input type="checkbox" name="ticketRefund1"
+						   id="ticketRefund1" data-ticketRefund disabled>
+					<label for="ticketRefund1">Возможен возврат билета</label>
+				</div>
+			</li>
+			<li class="big-form__item border-bottom">
+				<div class="big-form__wrapper quantity">
+					<label>Стоимость билета *</label>
+					<input name="ticketPrice1" type="number" required>
+				</div>
+				<p class="big-form__description">рублей РФ</p>
+			</li>
+			<li><h4>Доступные локации *</h4></li>
+			<li class="big-form__item border-bottom">
+				<ul class="big-form__locations">
+					<li class="custom-checkbox">
+						<input type="checkbox" name="locationsVisitors1"
+							   id="locationsVisitors1">
+						<label for="locationsVisitors1">Все локации для посетителей</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" name="bigField1"
+							   id="bigField1">
+						<label for="bigField1">Большое поле</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" name="tribunes1"
+							   id="tribunes1">
+						<label for="tribunes1">Трибуны</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" name="cafe1"
+							   id="cafe1">
+						<label for="cafe1">Кафе</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" name="vip1"
+							   id="vip1">
+						<label for="vip1">Ложа для почетных гостей</label>
+					</li>
+				</ul>
+				<ul class="big-form__locations">
+					<li class="custom-checkbox">
+						<input type="checkbox" name="locationsMembers1"
+							   id="locationsMembers1">
+						<label for="locationsMembers1">Все локации для участников</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" name="cloakroom1"
+							   id="cloakroom1">
+						<label for="cloakroom1">Раздевалка спортсменов</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" name="canteen1"
+							   id="canteen1">
+						<label for="canteen1">Столовая для спортсменов</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" name="coaching1"
+							   id="coaching1">
+						<label for="coaching1">Тренерская</label>
+					</li>
+
+				</ul>
+				<ul class="big-form__locations">
+					<li class="custom-checkbox">
+						<input type="checkbox" name="locationsOrganizer1"
+							   id="locationsOrganizer1">
+						<label for="locationsOrganizer1">Все локации для
+							организаторов</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" name="judicial1"
+							   id="judicial1">
+						<label for="judicial1">Судейская</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" name="office1"
+							   id="office1">
+						<label for="office1">Офис площадки</label>
+					</li>
+					<li class="custom-checkbox">
+						<input type="checkbox" name="closet1"
+							   id="closet1">
+						<label for="closet1">Подтрибунное помещение</label>
+					</li>
+				</ul>
+			</li>
+			<li class="big-form__item border-bottom column big-form__tickets-show">
+				<h4>Количество входов *</h4>
+				<div class="custom-checkbox">
+					<input type="checkbox" name="reusableEntry1"
+						   id="reusableEntry1" data-reusable>
+					<label for="reusableEntry1">Многоразовый вход</label>
+				</div>
+				<div class="big-form__entry-wrapper">
+					<ul class="big-form__entry-list">
+						<li class="big-form__entry-item">
+							<input type="radio" name="reusable1" value="ticketUnlimited1"
+								   id="ticketUnlimited1" checked>
+							<label for="ticketUnlimited1">
+								Многоразовый безлимитный
+							</label>
+						</li>
+						<li class="big-form__entry-item">
+							<input type="radio" name="reusable1" value="ticketLimited1"
+								   id="ticketLimited1">
+							<label for="ticketLimited1">
+								Многоразовый лимитированный, входов, не более
+							</label>
+							<input type="number" name="ticketLimitedInput1">
+						</li>
+						<li class="big-form__entry-item">
+							<input type="radio" name="reusable1" value="ticketSchedule1"
+								   id="ticketSchedule1">
+							<label for="ticketSchedule1">
+								Многоразовый по расписанию (разные локации)
+							</label>
+
+						</li>
+					</ul>
+					<ul class="big-form__entry-list">
+						<li class="custom-checkbox">
+							<input type="checkbox" name="autograph1"
+								   id="autograph1">
+							<label for="autograph1">Автограф-сессия, холл гостиницы
+								Ашамлыклар</label>
+						</li>
+						<li class="custom-checkbox">
+							<input type="checkbox" name="tournamen1"
+								   id="tournament1">
+							<label for="tournament1">Турнир, стадион им. И.Е.
+								Суеуебаева</label>
+						</li>
+						<li class="custom-checkbox">
+							<input type="checkbox" name="afterparty1"
+								   id="afterparty1">
+							<label for="afterparty1">Афтерпати, ресторан «Халяль»</label>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="big-form__item">
+				<div class="big-form__wrapper">
+					<label>Описание билета *</label>
+					<textarea placeholder="Подробное описание билета"
+							  name="ticketDescription1"
+					></textarea>
+				</div>
+				<div class="big-form__description">
+					<p>Лучше всего написать, что конкретно получает владелец билета в рамках
+						события.</p>
+					<p>Это описание — публичное, то есть — видно вообще всем.</p>
+				</div>
+			</li>
+			<li class="big-form__item border-bottom column big-form__tickets-show">
+				<h4>Автопропуск *</h4>
+				<div class="custom-checkbox">
+					<input type="checkbox" name="autoPass1"
+						   id="autoPass1"  data-reusable>
+					<label for="autoPass1">Включить автопропуск</label>
+				</div>
+				<h5 class="big-form__car-title">Локации для транспорта *</h5>
+				<div class="big-form__entry-wrapper pt0">
+					<ul class="big-form__locations">
+						<li class="custom-checkbox">
+							<input type="checkbox" name="carLocationsVisitors1"
+								   id="carLocationsVisitors1">
+							<label for="carLocationsVisitors1">Все локации для
+								посетителей</label>
+						</li>
+						<li class="custom-checkbox">
+							<input type="checkbox" name="bigParking1"
+								   id="bigParking1">
+							<label for="bigParking1">Большая парковка</label>
+						</li>
+						<li class="custom-checkbox">
+							<input type="checkbox" name="refueling1"
+								   id="refueling1">
+							<label for="refueling1">Заправка</label>
+						</li>
+					</ul>
+					<ul class="big-form__locations">
+						<li class="custom-checkbox">
+							<input type="checkbox" name="carLocationsMembers1"
+								   id="carLocationsMembers1">
+							<label for="carLocationsMembers1">Все локации для
+								участников</label>
+						</li>
+						<li class="custom-checkbox">
+							<input type="checkbox" name="secondEntry1"
+								   id="secondEntry1">
+							<label for="secondEntry1">Второй въезд</label>
+						</li>
+					</ul>
+					<ul class="big-form__locations">
+						<li class="custom-checkbox">
+							<input type="checkbox" name="carLocationsOrganizer1"
+								   id="carLocationsOrganizer1">
+							<label for="carLocationsOrganizer1">Все локации для
+								организаторов</label>
+						</li>
+						<li class="custom-checkbox">
+							<input type="checkbox" name="parkingOrg1"
+								   id="parkingOrg1">
+							<label for="parkingOrg1">Стоянка администрации</label>
+						</li>
+						<li class="custom-checkbox">
+							<input type="checkbox" name="garage1"
+								   id="garage1">
+							<label for="garage1">Гараж</label>
+						</li>
+						<li class="custom-checkbox">
+							<input type="checkbox" name="third1"
+								   id="third1">
+							<label for="third1">Третий въезд</label>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<button class="big-form__btn-ticket save">Сохранить билет</button>
+			</li>
+		</ul>
+		<button class="big-form__btn-delete-ticket" type="button" data-btn="delete">
 			<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M6.75215 6.00018L11.8447 0.90761C12.0526 0.699769 12.0526 0.363358 11.8447 0.155518C11.6369 -0.0518392 11.3005 -0.0518392 11.0926 0.155518L6.00006 5.24809L0.907972 0.155518C0.700132 -0.0518392 0.363721 -0.0518392 0.15588 0.155518C-0.0514767 0.363358 -0.0514767 0.699769 0.15588 0.90761L5.24845 6.00018L0.15588 11.0923C-0.0519601 11.3001 -0.0519601 11.6365 0.15588 11.8444C0.2598 11.9483 0.395622 12 0.531926 12C0.668231 12 0.804052 11.9483 0.907972 11.8444L6.00054 6.75179L11.0931 11.8444C11.197 11.9483 11.3329 12 11.4692 12C11.6055 12 11.7413 11.9483 11.8452 11.8444C12.053 11.6365 12.053 11.3001 11.8452 11.0923L6.75264 5.9997L6.75215 6.00018Z"
 					  fill="black"/>
