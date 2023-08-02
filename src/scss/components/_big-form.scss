@@ -121,6 +121,7 @@
       display: inline-block;
       margin-left: 4px;
     }
+
     &._rotate {
       &::after {
         transform: rotateX(180deg);
@@ -141,7 +142,7 @@
 
     &._active {
       height: max-content;
-       display: block;
+      display: block;
     }
 
     h3 {
@@ -191,4 +192,9 @@
     color: #EF3B4C;
   }
 
+  input[type="radio"] {
+    accent-color: black;
+    width: 15px;
+    height: 15px;
+   }
 }
