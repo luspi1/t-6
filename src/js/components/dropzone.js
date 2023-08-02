@@ -41,10 +41,36 @@ if (organizerProfileLogo) {
         previewsContainer: '.big-form__dropzone-previews'
     })
 
-  organizerLogoDropzone.on("success", function (file, response) {
-    // 1) получить текущее время
-    // 2) в необходимом формате вывести это время на страницу
-  })
+    organizerLogoDropzone.on('success', function (file, response) {
+        const parent = document.querySelector('.dz-details')
+        const paragraph = document.createElement('span')
+        const date = new Date()
 
+        const setZero = (date) => (date >= 0 && date < 10) ? `0${date}` : date
+
+        const year = date.getFullYear()
+        const month = setZero(date.getMonth() + 1)
+        const day = setZero(date.getDate())
+        const hours = setZero(date.getHours())
+        const minutes = setZero(date.getMinutes())
+
+        paragraph.classList.add('dz-date')
+        paragraph.textContent = `Загружен в ${hours}:${minutes} ${day}.${month}.${year}`
+        parent.prepend(paragraph)
+    })
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

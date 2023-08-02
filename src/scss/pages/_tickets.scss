@@ -28,6 +28,19 @@
           .big-form__list {
             display: block;
           }
+          .big-form__btn-ticket-add{
+            pointer-events: auto;
+          }
+        }
+      }
+
+      ul[data-list="changeable"] {
+        > li {
+          position: relative;
+
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
         }
       }
 
@@ -69,13 +82,15 @@
           }
         }
       }
-      &__description{
-        >p{
-          &:not(:last-child){
+
+      &__description {
+        > p {
+          &:not(:last-child) {
             margin-bottom: 13px;
           }
         }
       }
+
       &__wrapper {
         width: 45%;
 
@@ -87,11 +102,33 @@
           }
         }
       }
+      &__car-title {
+        padding-top: 15px;
+        padding-bottom: 5px;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: normal;
+        display: none;
+      }
 
       &__entry-wrapper {
-        display: flex;
         gap: 20px;
         padding-top: 15px;
+        display: none;
+        &.pt0{
+          padding-top: 0;
+        }
+      }
+
+      &__tickets-show {
+        &._active {
+          .big-form__car-title{
+            display: block;
+          }
+          .big-form__entry-wrapper {
+            display: flex;
+          }
+        }
       }
 
       &__entry-list {
@@ -101,9 +138,11 @@
       &__entry-item {
         display: flex;
         align-items: center;
-        &:not(:last-child){
+
+        &:not(:last-child) {
           margin-bottom: 5px;
         }
+
         input[type="number"] {
           height: 35px;
           width: 50px;
@@ -136,7 +175,40 @@
         }
       }
 
-    }
+      &__btn-ticket {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        width: max-content;
+        padding: 0 15px;
+        border-radius: 3px;
+        border: 1px solid #868585;
+        color: black;
+        font-weight: 400;
+        font-size: 13px;
+        text-align: center;
+      }
 
+      &__btn-ticket-save {
+        background: #F0F2F3;
+      }
+
+      &__btn-ticket-add {
+        margin: 20px 0 30px;
+        background: #FFF;
+        pointer-events: none;
+        svg {
+          margin-right: 5px;
+        }
+      }
+
+      &__btn-delete-ticket {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+      }
+    }
   }
 }
