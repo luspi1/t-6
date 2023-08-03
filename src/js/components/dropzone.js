@@ -43,26 +43,16 @@ if (organizerProfileLogo) {
 
     organizerLogoDropzone.on('success', function (file, response) {
         const parent = document.querySelector('.dz-details')
-        const paragraph = document.createElement('span')
+        const stringDate = document.createElement('span')
         const date = new Date()
+        const currentTime = date.toLocaleTimeString('ru-RU', {hour: 'numeric', minute: 'numeric'})
+        const currentDate = date.toLocaleDateString()
 
-        const setZero = (date) => (date >= 0 && date < 10) ? `0${date}` : date
-
-        const year = date.getFullYear()
-        const month = setZero(date.getMonth() + 1)
-        const day = setZero(date.getDate())
-        const hours = setZero(date.getHours())
-        const minutes = setZero(date.getMinutes())
-
-        paragraph.classList.add('dz-date')
-        paragraph.textContent = `Загружен в ${hours}:${minutes} ${day}.${month}.${year}`
-        parent.prepend(paragraph)
+        stringDate.classList.add('dz-date')
+        stringDate.textContent = `Загружен в ${currentTime} ${currentDate}`
+        parent.prepend(stringDate)
     })
 }
-
-
-
-
 
 
 
