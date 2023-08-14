@@ -7,6 +7,7 @@
      }
 
      label {
+
          margin-bottom: 8px;
 
          @include montserrat-regular;
@@ -21,6 +22,7 @@
      }
 
      input {
+         width: 100%;
          margin-bottom: 20px;
          padding: 9px;
      }
@@ -51,5 +53,16 @@
          font-size: 13px;
          line-height: 22px;
          color: $blue;
+     }
+
+     .reset-passsword-block {
+         display: none;
+         margin-top: 30px;
+         padding-top: 25px;
+         border-top: 1px solid #E3DDDD;
+
+         p:first-child {
+             margin-bottom: 25px;
+         }
      }
  }

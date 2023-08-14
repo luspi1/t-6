@@ -13,4 +13,4 @@ import './components/bigForm'
 
 import './components/homePage'
 
-import './components/showPassword'
+import './components/managePassword'
