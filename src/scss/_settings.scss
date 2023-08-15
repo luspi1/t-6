@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -269,6 +271,10 @@ h1 {
   font-size: 13px;
   line-height: 22px;
   color: #ffffff;
+
+  &._disabled {
+    background: #B6C8E3;
+  }
 }
 
 .search-wrapper {
@@ -311,4 +317,3 @@ h1 {
     background: #EBEAEA;
   }
 }
-

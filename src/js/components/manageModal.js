@@ -15,10 +15,10 @@ if (modalOverlay) {
 }
 
 
-if (openModalBtns) {
-  openModalBtns.forEach(btn => {
+if (openModalBtns) {  
+  openModalBtns.forEach(btn => {    
     btn.addEventListener('click', (e) => {
-      e.preventDefault()
+      e.preventDefault()     
       const targetModal = document.querySelector(`#${e.currentTarget.dataset.openModal}`)
       targetModal.classList.add('_active')
       modalOverlay.classList.add('_active')

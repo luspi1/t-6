@@ -6,8 +6,11 @@
 })
 
 <body class="page__body home-page">
-
+	
 <div class="site-container">
+	<div class="modal-overlay"></div>
+	@include('partials/modals/user-enter-modal.html')
+	
 	@include('partials/header.html')
 	<main class="main">
 		<div class="main-container">
@@ -167,7 +170,7 @@
 						</a>
 					</li>
 					<li class="main-menu__item-btn">
-						<button class="main-menu__btn blue-btn">Присоединиться</button>
+						<button class="main-menu__btn blue-btn" type="button">Присоединиться</button> 
 					</li>
 				</ul>
 			</nav>
