@@ -9,8 +9,14 @@ const smsTimer = document.querySelector('#smsTimer')
 let smsSeconds = (smsTimer.innerHTML).split(":")[1]
 
 if(showPasswordButton) {
-    showPasswordButton.addEventListener('click', () => {
-        password.type = password.type === "password" ? "text" : "password"      
+    showPasswordButton.addEventListener('click', () => {         
+        if(password.type === 'password') {
+            password.type = 'text'
+            showPasswordButton.classList.add("_is-shown-password")
+        } else {
+            password.type = 'password'
+            showPasswordButton.classList.remove("_is-shown-password")
+        }
     })
 }
 
