@@ -9,7 +9,6 @@ html {
 }
 
 body {
-  margin: 0;
   min-width: 340px;
   overflow-x: hidden;
   @include montserrat-regular;
@@ -159,12 +158,12 @@ h1 {
 }
 
 .air-datepicker-global-container {
-  z-index: 900;
+  z-index: 9900;
 }
 
 .date-custom-container {
   z-index: 900;
-  position: absolute;
+  //position: absolute;
   left: 0;
   top: 0;
 }
