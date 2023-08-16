@@ -1,0 +1,17 @@
+.user-registration-modal {
+    .text {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .checkbox-container {
+        margin: 24px 0 30px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        .chechbox-label {
+            line-height: 18px;
+        }
+    }
+}
