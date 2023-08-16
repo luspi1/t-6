@@ -7,6 +7,7 @@
         id="email"
         type="text"
         placeholder="example@example.com"
+        name="userEmail"
         required
       />
     </p>
@@ -16,6 +17,7 @@
         id="password"
         type="password"
         placeholder="*************"
+        name="userPassword"
         required
       />
       <button
@@ -67,7 +69,13 @@
     </p>
     <p class="input-container">
       <label for="code">Проверочный код</label>
-      <input id="code" type="password" placeholder="******" required />
+      <input
+        id="code"
+        type="password"
+        placeholder="******"
+        name="smsCode"
+        required
+      />
     </p>
     <div class="modal-links">
       <button class="white-btn" type="button">Не приходит код</button>
