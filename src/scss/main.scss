@@ -21,9 +21,14 @@
 @import "./components/navigation-row";
 @import "./components/big-form";
 @import "./components/custom-checkbox";
+@import "./components/button";
 
 
 @import "./components/header";
 @import "./components/footer";
 
-@import "./components/modals/userEnterModal";
+
+// Модальные окна
+@import "./components/modals/modal";
+@import "./components/modals/user-enter-modal";
+@import "./components/modals/user-registration-modal";

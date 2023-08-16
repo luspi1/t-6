@@ -9,7 +9,6 @@ html {
 }
 
 body {
-  margin: 0;
   min-width: 340px;
   overflow-x: hidden;
   @include montserrat-regular;
@@ -55,14 +54,6 @@ a {
 
 p {
   margin: 0;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-  background: none;
-  margin: 0;
-  padding: 0;
 }
 
 select {
@@ -159,12 +150,12 @@ h1 {
 }
 
 .air-datepicker-global-container {
-  z-index: 900;
+  z-index: 9900;
 }
 
 .date-custom-container {
   z-index: 900;
-  position: absolute;
+  //position: absolute;
   left: 0;
   top: 0;
 }
@@ -212,69 +203,10 @@ h1 {
   width: 100%;
 }
 
-.modal {
-  position: fixed;
-  overflow-y: auto;
-  overflow-x: hidden;
-  left: 50%;
-  top: 50%;
-  width: 602px;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-  border: 1px solid #93B5C5;
-  border-radius: 5px;
-  padding: 44px 52px 35px 36px;
-  box-shadow: 0 8px 15px rgba(51, 115, 144, 0.3);
-  transition: all .2s;
-  opacity: 0;
-  visibility: hidden;
-
-  &._active {
-    opacity: 1;
-    z-index: 999;
-    visibility: visible;
-  }
-}
-
-.modal-overlay {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  visibility: hidden;
-  z-index: -1;
-
-  &._active {
-    z-index: 998;
-    visibility: visible;
-  }
-}
-
 .trim-string {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.blue-btn {
-  width: max-content;
-  height: 35px;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  background: #064AB1;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 22px;
-  color: #ffffff;
-
-  &._disabled {
-    background: #B6C8E3;
-  }
 }
 
 .search-wrapper {
