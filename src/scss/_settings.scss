@@ -56,14 +56,6 @@ p {
   margin: 0;
 }
 
-button {
-  border: none;
-  cursor: pointer;
-  background: none;
-  margin: 0;
-  padding: 0;
-}
-
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -215,25 +207,6 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.blue-btn {
-  width: max-content;
-  height: 35px;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  background: #064AB1;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 22px;
-  color: #ffffff;
-
-  &._disabled {
-    background: #B6C8E3;
-  }
 }
 
 .search-wrapper {

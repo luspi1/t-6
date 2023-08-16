@@ -1,0 +1,30 @@
+button {
+    border: none;
+    cursor: pointer;
+    background: none;
+    margin: 0;
+    padding: 0;
+    @include montserrat-semibold;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.blue-btn {
+    width: max-content;
+    height: 35px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background: $blue;
+    color: #ffffff;
+
+    &._disabled {
+        background: #B6C8E3;
+    }
+}
+
+.white-btn {
+    color: $blue;
+}
