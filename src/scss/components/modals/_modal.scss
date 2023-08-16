@@ -95,9 +95,14 @@
     .block-grouping {
         display: flex;
         justify-content: space-between;
+        gap: 10px;
 
-        p {
-            width: 100%;
+        .block-grouping-item {
+            min-width: calc((100% - 10px) / 2);
+
+            .big-form__date-wrapper {
+                width: 100%;
+            }
         }
     }
 
