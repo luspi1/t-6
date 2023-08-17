@@ -13,5 +13,13 @@
         .chechbox-label {
             line-height: 18px;
         }
+
+        a {
+            color: $blue;
+        }
+    }
+
+    .custom-checkbox [type=checkbox]:checked+label:after {
+        top: -2px;
     }
 }

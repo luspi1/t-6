@@ -1,18 +1,4 @@
  .user-enter-modal {
-     .show-password {
-         cursor: pointer;
-         display: inline;
-         position: absolute;
-         right: 10px;
-         top: 45px;
-
-         &._is-shown-password {
-             .svg-path {
-                 fill: $blue;
-             }
-         }
-     }
-
      .modal-links {
          margin-bottom: 25px;
          display: flex;

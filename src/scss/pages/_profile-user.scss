@@ -22,7 +22,7 @@
       }
 
       &__wrapper {
-        > b {
+        >b {
           font-size: 13px;
           font-weight: 600;
           line-height: normal;
@@ -34,7 +34,7 @@
           .custom-checkbox {
             margin-top: 10px;
 
-            > label {
+            >label {
               margin-bottom: 0;
             }
           }
@@ -95,35 +95,6 @@
         }
       }
 
-      &__btn-show-pass {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        width: 20px;
-        height: 18px;
-        right: 7px;
-        top: 23px;
-        transform: translateY(calc(35px / 2 - 50%));
-
-        .big-form__eye-open {
-          display: none;
-        }
-
-        .big-form__eye-close {
-          display: block;
-        }
-
-        &._open {
-          .big-form__eye-close {
-            display: none;
-          }
-
-          .big-form__eye-open {
-            display: block;
-          }
-        }
-      }
-
       &__error-warning {
         color: #ef3b4c;
         font-size: 13px;
@@ -152,7 +123,9 @@
           }
 
           .big-form__dropzone-left {
-            svg, p {
+
+            svg,
+            p {
               display: none;
             }
           }
@@ -211,6 +184,7 @@
 
           .dz-filename {
             order: 1;
+
             span {
               display: block;
               width: 150px;
@@ -220,11 +194,13 @@
               color: $blue;
             }
           }
+
           .dz-remove {
             font-size: 13px;
             line-height: 2;
             color: black;
           }
+
           .big-form__btn-add-logo {
             pointer-events: none;
           }
@@ -245,7 +221,7 @@
         justify-content: center;
         text-align: center;
 
-        > svg {
+        >svg {
           margin-bottom: 5px;
         }
       }
