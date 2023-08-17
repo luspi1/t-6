@@ -1,0 +1,29 @@
+.btn-show-pass {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 18px;
+    right: 7px;
+    top: 23px;
+    transform: translateY(calc(35px / 2 - 50%));
+
+
+    .big-form__eye-open {
+        display: none;
+    }
+
+    .big-form__eye-close {
+        display: block;
+    }
+
+    &._open {
+        .big-form__eye-close {
+            display: none;
+        }
+
+        .big-form__eye-open {
+            display: block;
+        }
+    }
+}
