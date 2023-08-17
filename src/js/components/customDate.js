@@ -6,7 +6,7 @@ const initAllDates = () => {
   if (allDateInputs) {
     allDateInputs.forEach((el) => {
       const customDate = new AirDatepicker(el, {
-        container: '.date-custom-container',
+        container: el.closest('.modal') ? '.date-custom-container' : '',
       });
 
       el.addEventListener('click', (e) => {
@@ -14,6 +14,7 @@ const initAllDates = () => {
           .split('.')
           .reverse()
           .join('-');
+
         if (featuredDate) {
           customDate.selectDate(featuredDate);
           customDate.setViewDate(featuredDate);
