@@ -1,0 +1,63 @@
+<div class="modal user-modal user-enter-modal" id="user-enter-modal">
+  <form action="#">
+    <h4>Вход посетителя</h4>
+    <p class="input-container">
+      <label for="email">Логин учетной записи (E-mail)</label>
+      <input
+        id="email"
+        type="text"
+        placeholder="example@example.com"
+        name="userEmail"
+        required
+      />
+    </p>
+    <p class="input-container password">
+      <label for="password">Пароль учетной записи</label>
+      <input
+        class=""
+        id="password"
+        type="password"
+        placeholder="*************"
+        name="userPassword"
+        required
+      />
+      @include('./eye-button.html')
+    </p>
+
+    <div class="modal-links">
+      <button class="white-btn reset-password-button" type="button">
+        Не помню пароль
+      </button>
+      <button
+        class="white-btn"
+        type="button"
+        data-open-modal="user-registration-modal"
+        data-close-modal="user-enter-modal"
+      >
+        Пройти регистрацию
+      </button>
+    </div>
+    <button class="blue-btn submit-enter" type="submit">Войти</button>
+  </form>
+
+  <form class="reset-password-form" action="#">
+    <p>
+      Код отправлен в виде SMS. Повторить отправку через
+      <span id="smsTimer">0:30</span>
+    </p>
+    <p class="input-container">
+      <label for="code">Проверочный код</label>
+      <input
+        id="code"
+        type="password"
+        placeholder="******"
+        name="smsCode"
+        required
+      />
+    </p>
+    <div class="modal-links">
+      <button class="white-btn" type="button">Не приходит код</button>
+    </div>
+    <button class="blue-btn" type="submit">Подтвердить вход</button>
+  </form>
+</div>
