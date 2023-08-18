@@ -822,11 +822,14 @@
                   </a>
                 </li>
                 <li class="events__item events__item-create">
-                  <a href="#" class="events__link _create">
+                  <button class="events__link _create" type="button">
                     Добавить событие
-                  </a>
+                  </button>
                   <div class="events__modal">
-                    <button class="events__modal-close" type="button">
+                    <button
+                      class="events__modal-close modal-close-btn"
+                      type="button"
+                    >
                       <svg
                         width="17"
                         height="17"
@@ -859,7 +862,14 @@
                       Для этого нужно зарегистрироваться в качестве
                       организатора.
                     </p>
-                    <a class="blue-btn" href="#">Зарегистрироваться</a>
+                    <button
+                      class="blue-btn events__modal-registration-button"
+                      type="button"
+                      data-open-modal="user-registration-modal"
+                      data-close-modal="user-enter-modal"
+                    >
+                      Зарегистрироваться
+                    </button>
                   </div>
                 </li>
               </ul>

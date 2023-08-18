@@ -103,7 +103,8 @@
       left: 0;
     }
 
-    .swiper-button-next:after, .swiper-button-prev:after {
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
       content: none;
     }
   }
@@ -157,7 +158,7 @@
           height: 36px;
           padding: 0 18px 0 6px;
 
-          > a {
+          >a {
             align-items: center;
           }
         }
@@ -217,7 +218,7 @@
       transition: all .3s;
 
       &:not(:last-child) {
-        > a {
+        >a {
           display: flex;
           width: 100%;
           height: 100%;
@@ -274,7 +275,7 @@
 
         }
 
-        > svg {
+        >svg {
           margin-right: 2px;
         }
       }
