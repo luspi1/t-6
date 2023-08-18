@@ -28,3 +28,11 @@ button {
 .white-btn {
     color: $blue;
 }
+
+.modal-close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1000;
+}

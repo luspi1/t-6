@@ -21,8 +21,10 @@ if (closeModalBtns) {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const targetModal = e.currentTarget.closest('.modal');
-      targetModal.classList.remove('_active');
-      modalOverlay.classList.remove('_active');
+      if (targetModal) {
+        targetModal.classList.remove('_active');
+        modalOverlay.classList.remove('_active');
+      }
     });
   });
 }
