@@ -249,3 +249,43 @@ h1 {
     background: #EBEAEA;
   }
 }
+
+
+.registration-modal-date {
+  @include montserrat-medium;
+
+  font-size: 15px;
+  line-height: 18px;
+  margin-top: 11px;
+}
+
+.subtitle {
+  margin-top: 34px;
+
+  @include montserrat-medium;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.optional-block {
+  padding: 15px;
+  margin: 15px 0;
+
+  background: #F0F2F3;
+  border: 1px dashed #868585;
+  border-radius: 5px;
+
+  p.input-container,
+  div.input-container {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+}
+
+.optional-block-container {
+  margin: 10px 0;
+}
+
+.optional-block-container [type="checkbox"]:not(:checked)~.optional-block {
+  display: none;
+}

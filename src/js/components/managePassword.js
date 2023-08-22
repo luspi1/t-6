@@ -1,11 +1,7 @@
+import { SMS_SECONDS_START_VALUE, TIME_INTERVAL_MILLISECONDS } from '../_vars';
 const showPasswordButtons = document.querySelectorAll('.btn-show-pass');
 
-const submitEnterButton = document.querySelector('.submit-enter');
-const resetPasswordForm = document.querySelector('.reset-password-form');
-const resetPasswordButton = document.querySelector('.reset-password-button');
-
-const smsTimer = document.querySelector('#smsTimer');
-let smsSeconds = smsTimer.innerHTML.split(':')[1];
+const registrationForm = document.querySelector('.home-registration__reg-form');
 
 if (showPasswordButtons) {
   showPasswordButtons.forEach((item) => {
@@ -21,16 +17,35 @@ if (showPasswordButtons) {
   });
 }
 
-if (resetPasswordButton) {
-  resetPasswordButton.addEventListener('click', () => {
-    submitEnterButton.classList.add('disabled');
+const timer = () => {
+  const smsTimer = document.querySelector('#smsTimer');
+  smsTimer.innerHTML = `0:${SMS_SECONDS_START_VALUE}`;
 
-    resetPasswordForm.style.display = 'block';
+  let smsSeconds = SMS_SECONDS_START_VALUE;
 
-    const smsIntervalId = setInterval(() => {
-      smsSeconds--;
-      if (smsSeconds === 0) clearInterval(smsIntervalId);
-      smsTimer.innerHTML = `0:${smsSeconds}`;
-    }, 1000);
+  const smsIntervalId = setInterval(() => {
+    smsSeconds--;
+    if (smsSeconds === 0) clearInterval(smsIntervalId);
+    smsTimer.innerHTML = `0:${smsSeconds}`;
+  }, TIME_INTERVAL_MILLISECONDS);
+
+  return smsIntervalId;
+};
+
+export const getSmsCode = () => {
+  registrationForm.querySelector('.submit-enter').classList.remove('_disabled');
+
+  registrationForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    registrationForm.querySelector('.submit-enter').classList.add('_disabled');
+    registrationForm.nextElementSibling.classList.remove('hidden');
+
+    const id = timer();
+    for (let i = 0; i < id; i++) {
+      clearInterval(i);
+    }
   });
-}
+};
+
+getSmsCode();

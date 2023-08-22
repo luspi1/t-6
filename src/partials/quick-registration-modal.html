@@ -1,0 +1,248 @@
+<div class="modal user-modal" id="quick-registration-modal">
+  <button
+    class="modal-close-btn"
+    data-close-modal="quick-registration-modal"
+    type="button"
+  >
+    <svg
+      width="21"
+      height="20"
+      viewBox="0 0 21 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.2536 10.0003L19.7412 1.51268C20.0876 1.16628 20.0876 0.605597 19.7412 0.259196C19.3948 -0.0863988 18.8341 -0.0863988 18.4877 0.259196L10.0001 8.74682L1.51329 0.259196C1.16689 -0.0863988 0.606201 -0.0863988 0.2598 0.259196C-0.0857945 0.605597 -0.0857945 1.16628 0.2598 1.51268L8.74742 10.0003L0.2598 18.4871C-0.0866001 18.8335 -0.0866001 19.3942 0.2598 19.7406C0.433001 19.9138 0.659369 20 0.886544 20C1.11372 20 1.34009 19.9138 1.51329 19.7406L10.0009 11.253L18.4885 19.7406C18.6617 19.9138 18.8881 20 19.1153 20C19.3424 20 19.5688 19.9138 19.742 19.7406C20.0884 19.3942 20.0884 18.8335 19.742 18.4871L11.2544 9.9995L11.2536 10.0003Z"
+        fill="white"
+      />
+    </svg>
+  </button>
+  <form class="styled-form" action="#">
+    <h4>Атмановские Кулачки 2023</h4>
+    <p class="registration-modal-date">23 марта 2023 года — 25 марта 2023</p>
+    <h5 class="subtitle">Регистрация посетителя</h5>
+
+    <p class="input-container">
+      <label class="required" for="quick-user-surname">Фамилия</label>
+      <input
+        id="quick-user-surname"
+        type="text"
+        placeholder="Фамилия"
+        name="quick_user_surname"
+        required
+      />
+    </p>
+    <p class="input-container">
+      <label class="required" for="quick-user-name">Имя</label>
+      <input
+        id="quick-user-name"
+        type="text"
+        placeholder="Имя"
+        name="quick_user_name"
+        required
+      />
+    </p>
+    <p class="input-container">
+      <label class="required" for="quick-user-email">E-mail</label>
+      <input
+        id="quick-user-email"
+        type="email"
+        placeholder="example@example.com"
+        name="quick_user_email"
+        required
+      />
+    </p>
+    <p class="input-container">
+      <label class="required" for="quick-user-phone"
+        >Номер телефона для регистрации</label
+      >
+      <input
+        class="phone-mask"
+        id="quick-user-phone"
+        type="tel"
+        placeholder="+7 (999) 999-99-99"
+        name="quick_user_phone"
+        required
+      />
+    </p>
+
+    <p class="checkbox-container custom-checkbox">
+      <input
+        type="checkbox"
+        id="quick-registration-checkbox"
+        name="quick_registration_checkbox"
+        checked
+      />
+      <label class="chechbox-label" for="quick-registration-checkbox"
+        >Не создавать постоянную учетную запись Посетителя</label
+      >
+    </p>
+
+    <div class="input-container custom-select">
+      <label for="quick-ticket-type">Выбрать вид билета</label>
+      <select
+        class="home-registration__state-select"
+        name="quick_ticket_type"
+        id="quick-ticket-type"
+      >
+        <option value="1">Первый</option>
+      </select>
+    </div>
+
+    <div>
+      <p>У меня уже есть учетная запись.</p>
+      <button
+        class="white-btn"
+        type="button"
+        data-open-modal="authorization-modal"
+        data-close-modal="quick-registration-modal"
+      >
+        Хочу войти с логином и паролем
+      </button>
+    </div>
+
+    <div class="custom-checkbox optional-block-container">
+      <input
+        type="checkbox"
+        id="quick-registration-transport-checkbox"
+        name="quick_registration_transport_checkbox"
+      />
+      <label class="chechbox-label" for="quick-registration-transport-checkbox"
+        >Зарегистрировать транспортное средство</label
+      >
+
+      <div class="optional-block">
+        <h6>Регистрация транспортного средства</h6>
+        <div class="input-container custom-select">
+          <label for="quick-transport-type">Тип транспортного средства</label>
+          <select
+            class="home-registration__state-select"
+            name="quick_transport_type"
+            id="quick-transport-type"
+          >
+            <option value="1">Легковой автомобиль</option>
+          </select>
+        </div>
+
+        <div class="block-grouping">
+          <p class="input-container block-grouping-item">
+            <label for="quick-car-brand">Марка</label>
+            <input
+              id="quick-car-brand"
+              type="text"
+              placeholder="Марка"
+              name="quick_car_brand"
+            />
+          </p>
+
+          <p class="input-container block-grouping-item">
+            <label for="quick-car-model">Модель</label>
+            <input
+              id="quick-car-model"
+              type="text"
+              placeholder="Модель"
+              name="quick_car_model"
+            />
+          </p>
+        </div>
+
+        <div class="block-grouping">
+          <p class="input-container block-grouping-item">
+            <label for="quick-car-color">Цвет</label>
+            <input
+              id="quick-car-color"
+              type="text"
+              placeholder="Цвет"
+              name="quick_car_color"
+            />
+          </p>
+
+          <p class="input-container block-grouping-item">
+            <label for="quick-car-state-number">Госномер</label>
+            <input
+              id="quick-car-state-number"
+              type="text"
+              placeholder="Госномер"
+              name="quick_car_state_number"
+            />
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-checkbox optional-block-container">
+      <input
+        type="checkbox"
+        id="quick-registration-group-checkbox"
+        name="quick_registration_group_checkbox"
+      />
+      <label class="chechbox-label" for="quick-registration-group-checkbox"
+        >Зарегистрировать группу посетителей</label
+      >
+      <div class="optional-block">
+        <h6>Регистрация группы</h6>
+        <div class="input-container custom-select">
+          <label for="quick-group-type">Вид группы</label>
+          <select
+            class="home-registration__state-select"
+            name="quick_group_type"
+            id="quick-group-type"
+          >
+            <option value="1">Семья</option>
+          </select>
+        </div>
+
+        <div class="block-grouping">
+          <div class="input-container custom-select">
+            <label for="quick-event-side">Сторона в событии</label>
+            <select
+              class="home-registration__state-select"
+              name="quick_event_side"
+              id="quick-event-side"
+            >
+              <option value="1">Семья</option>
+            </select>
+          </div>
+
+          <p class="input-container block-grouping-item">
+            <label for="quick-visitors-count">Количество участников</label>
+            <input
+              id="quick-visitors-count"
+              type="number"
+              placeholder="2-99"
+              name="quick_visitors_count"
+            />
+          </p>
+        </div>
+
+        <p class="input-container block-grouping-item">
+          <label for="quick-group-title">Название группы</label>
+          <input
+            id="quick-group-title"
+            type="text"
+            placeholder="Название группы"
+            name="quick_group_title"
+          />
+        </p>
+      </div>
+    </div>
+
+    <p class="text">
+      Пароль будет создан Системой автоматически и прислан Вам в SMS.
+    </p>
+
+    <p class="checkbox-container custom-checkbox">
+      <input
+        type="checkbox"
+        id="quick-personal-data-agree-checkbox"
+        name="quick_personal_data_agree_checkbox"
+        checked
+      />
+      <label class="chechbox-label" for="quick-personal-data-agree-checkbox"
+        >Подверждаю ознакомление с <a href="#">Правилами Системы</a> и
+        <a href="#">Соглашением о Персональных Данных</a></label
+      >
+    </p>
+    <button class="blue-btn" type="submit">Зарегистрироваться</button>
+  </form>
+</div>

@@ -1,0 +1,142 @@
+<template id="homeStates">
+  <div class="home-registration__state" data-state="1">
+    <p class="input-container">
+      <label class="required" for="template-user-email"
+        >Логин учетной записи</label
+      >
+      <input
+        id="template-user-email"
+        type="text"
+        placeholder="example@example.com"
+        name="template_user_email"
+        required
+      />
+    </p>
+    <p class="input-container password">
+      <label for="template-user-password">Пароль учетной записи</label>
+      <input
+        id="template-user-password"
+        type="password"
+        placeholder="*************"
+        name="template_user_password"
+        required
+      />
+      @include('./eye-button.html')
+    </p>
+
+    <div class="modal-links">
+      <button
+        class="white-btn reset-password-button"
+        type="button"
+        data-open-modal="user-reset-password-modal"
+        data-close-modal="authorization-modal"
+      >
+        Не помню пароль
+      </button>
+      <button
+        class="white-btn"
+        type="button"
+        data-open-modal="user-registration-modal"
+        data-close-modal="authorization-modal"
+      >
+        Пройти регистрацию
+      </button>
+    </div>
+  </div>
+
+  <div class="home-registration__state" data-state="2">
+    <p class="input-container custom-select">
+      <label class="required" for="template-organizer-type"
+        >Тип учетной записи</label
+      >
+
+      <select name="template_organizer_type" id="template-organizer-type">
+        <option value="1">Руководитель организатора</option>
+        <option value="2">Помощник организатора</option>
+        <option value="3">Помощник организатора</option>
+        <option value="4">ИО организатора</option>
+        <option value="5">Вратарь организатора</option>
+        <option value="6">Второй заместитель</option>
+      </select>
+    </p>
+
+    <p class="input-container">
+      <label class="required" for="template-organizer-email"
+        >Логин учетной записи</label
+      >
+      <input
+        id="template-organizer-email"
+        type="tel"
+        placeholder="+7 (999) 999-99-99"
+        name="template_organizer_email"
+        required
+      />
+    </p>
+
+    <div class="modal-links">
+      <button
+        class="white-btn reset-password-button"
+        type="button"
+        data-open-modal="organizer-reset-password-modal"
+        data-close-modal="authorization-modal"
+      >
+        Не помню пароль
+      </button>
+      <button
+        class="white-btn"
+        type="button"
+        data-open-modal="organizer-registration-modal"
+        data-close-modal="authorization-modal"
+      >
+        Пройти регистрацию
+      </button>
+    </div>
+  </div>
+
+  <div class="home-registration__state" data-state="3">
+    <div class="home-registration__state" data-state="3">
+      <p class="input-container">
+        <label class="required" for="template-group-email"
+          >Логин учетной записи</label
+        >
+        <input
+          id="template-group-email"
+          type="text"
+          placeholder="example"
+          name="template_group_email"
+          required
+        />
+      </p>
+      <p class="input-container password">
+        <label for="template-group-password">Пароль учетной записи</label>
+        <input
+          id="template-group-password"
+          type="password"
+          placeholder="*************"
+          name="template_group_password"
+          required
+        />
+        @include('./eye-button.html')
+      </p>
+
+      <div class="modal-links">
+        <button
+          class="white-btn reset-password-button"
+          type="button"
+          data-open-modal="group-reset-password-modal"
+          data-close-modal="authorization-modal"
+        >
+          Не помню пароль
+        </button>
+        <button
+          class="white-btn"
+          type="button"
+          data-open-modal="group-registration-modal"
+          data-close-modal="authorization-modal"
+        >
+          Пройти регистрацию
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
