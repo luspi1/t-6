@@ -42,7 +42,9 @@
       data-state="1"
     >
       <p class="input-container">
-        <label for="auth-user-email">Логин учетной записи</label>
+        <label class="required" for="auth-user-email"
+          >Логин учетной записи</label
+        >
         <input
           id="auth-user-email"
           type="text"
@@ -52,7 +54,9 @@
         />
       </p>
       <p class="input-container password">
-        <label for="auth-user-password">Пароль учетной записи</label>
+        <label class="required" for="auth-user-password"
+          >Пароль учетной записи</label
+        >
         <input
           id="auth-user-password"
           type="password"
@@ -64,7 +68,12 @@
       </p>
 
       <div class="modal-links">
-        <button class="white-btn reset-password-button" type="button">
+        <button
+          class="white-btn reset-password-button"
+          type="button"
+          data-open-modal="user-reset-password-modal"
+          data-close-modal="authorization-modal"
+        >
           Не помню пароль
         </button>
         <button
