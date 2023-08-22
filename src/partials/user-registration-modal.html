@@ -1,7 +1,4 @@
-<div
-  class="modal user-modal user-registration-modal"
-  id="user-registration-modal"
->
+<div class="modal user-modal" id="user-registration-modal">
   <button
     class="modal-close-btn"
     data-close-modal="user-registration-modal"
@@ -20,25 +17,33 @@
       />
     </svg>
   </button>
-  <form action="#">
+  <form class="styled-form" action="#">
     <h4>Регистрация посетителя</h4>
     <p class="input-container">
-      <label for="name">Имя</label>
-      <input id="name" type="text" placeholder="Имя" name="userName" required />
+      <label class="required" for="registration-user-name">Имя</label>
+      <input
+        id="registration-user-name"
+        type="text"
+        placeholder="Имя"
+        name="registration_user_name"
+        required
+      />
     </p>
     <p class="input-container">
-      <label for="surname">Фамилия</label>
+      <label class="required" for="registration-user-surname">Фамилия</label>
       <input
-        id="surname"
+        id="registration-user-surname"
         type="text"
         placeholder="Фамилия"
-        name="userSurname"
+        name="registration_user_surname"
         required
       />
     </p>
     <div class="block-grouping">
       <div class="block-grouping-item date-custom-container">
-        <label>Дата рождения</label>
+        <label class="required" for="registration-user-birthday"
+          >Дата рождения</label
+        >
         <div class="df _fs">
           <div class="big-form__date-wrapper">
             <svg
@@ -55,10 +60,10 @@
             </svg>
             <input
               class="custom-date date-mask"
-              id="date"
+              id="registration-user-birthday"
               type="text"
               placeholder="дд.мм.гг"
-              name="userBirthday"
+              name="registration_user_birthday"
               required
             />
           </div>
@@ -66,36 +71,42 @@
       </div>
 
       <div class="block-grouping-item">
-        <label for="city">Город или регион</label>
+        <label class="required" for="registration-user-city"
+          >Город или регион</label
+        >
         <input
-          id="city"
+          id="registration-user-city"
           type="text"
           placeholder="Город или регион"
-          name="userCity"
+          name="registration_user_city"
           required
         />
       </div>
     </div>
 
     <p class="input-container">
-      <label for="login">Логин посетителя</label>
+      <label class="required" for="registration-user-login"
+        >Логин посетителя</label
+      >
       <input
-        id="login"
+        id="registration-user-login"
         type="email"
         placeholder="example@example.com"
-        name="userLogin"
+        name="registration_user_login"
         required
       />
     </p>
 
     <p class="input-container">
-      <label for="tel">Номер телефона</label>
+      <label class="required" for="registration-user-phone"
+        >Номер телефона</label
+      >
       <input
         class="phone-mask"
-        id="tel"
+        id="registration-user-phone"
         type="tel"
         placeholder="+7 (999) 999-99-99"
-        name="userPhone"
+        name="registration_user_phone"
         required
       />
     </p>
@@ -108,11 +119,11 @@
     <p class="checkbox-container custom-checkbox">
       <input
         type="checkbox"
-        id="personalDataAgree"
-        name="personalDataAgree"
+        id="registration-user-personal-data-agree"
+        name="registration_user_personal_data_agree"
         checked
       />
-      <label class="chechbox-label" for="personalDataAgree"
+      <label class="chechbox-label" for="registration-user-personal-data-agree"
         >Подверждаю ознакомление с <a href="#">Правилами Системы</a> и
         <a href="#">Соглашением о Персональных Данных</a></label
       >
