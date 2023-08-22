@@ -1,6 +1,6 @@
 import { initAllMasks } from './inputMask';
 import { initSelects } from './customSelect';
-import { initResetPassword } from './managePassword';
+import { getSmsCode } from './managePassword';
 import { manageModal } from './manageModal';
 
 // вид списка событий
@@ -100,7 +100,7 @@ if (homeRegForm) {
     initAllMasks();
     initSelects();
 
-    initResetPassword();
+    getSmsCode();
     manageModal();
   });
   //отправка данных формы

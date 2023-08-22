@@ -29,12 +29,14 @@ const timer = () => {
   return smsIntervalId;
 };
 
-export const initResetPassword = () => {
-  document.querySelector('.submit-enter').classList.remove('_disabled');
-  document.querySelector('.reset-password-form').style.display = 'none';
-  const resetPasswordButton = document.querySelector('.reset-password-button');
+export const getSmsCode = () => {
+  const submitButton = document.querySelector('.submit-enter');
 
-  resetPasswordButton.addEventListener('click', () => {
+  submitButton.classList.remove('_disabled');
+  document.querySelector('.reset-password-form').style.display = 'none';
+
+  submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
     document.querySelector('.submit-enter').classList.add('_disabled');
     document.querySelector('.reset-password-form').style.display = 'block';
 
@@ -49,4 +51,4 @@ export const initResetPassword = () => {
   });
 };
 
-initResetPassword();
+getSmsCode();
