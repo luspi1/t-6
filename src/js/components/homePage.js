@@ -1,3 +1,8 @@
+import { initAllMasks } from './inputMask';
+import { initSelects } from './customSelect';
+import { initResetPassword } from './managePassword';
+import { manageModal } from './manageModal';
+
 // вид списка событий
 const btnViewGrid = document.querySelector('.events__btn-grid');
 const btnViewRows = document.querySelector('.events__btn-rows');
@@ -59,3 +64,45 @@ window.addEventListener('click', (e) => {
     eventModal.classList.remove('_active');
   }
 });
+
+//Форма регистрации на главной
+
+const changeHomeRegContent = (state = 1, content) => {
+  const statesFragment = document.querySelector('#homeStates')?.content;
+
+  const currentState = statesFragment
+    .querySelector(`.home-registration__state[data-state="${state}"]`)
+    ?.cloneNode(true);
+  content.innerHTML = '';
+  content.append(currentState);
+
+  console.log(currentState);
+
+  return currentState;
+};
+
+const homeRegForm = document.querySelector('.home-registration__reg-form');
+
+if (homeRegForm) {
+  const homeStateSelect = homeRegForm.querySelector(
+    '.home-registration__state-select',
+  );
+  const homeRegFormContent = homeRegForm.querySelector(
+    '.home-registration__content',
+  );
+
+  homeStateSelect.addEventListener('change', (e) => {
+    console.log('CHANGE');
+
+    let stateId = e.target.value;
+    changeHomeRegContent(stateId, homeRegFormContent);
+
+    initAllMasks();
+    initSelects();
+
+    initResetPassword();
+    manageModal();
+  });
+  //отправка данных формы
+  //homeRegForm.addEventListener('submit', handleRegSubmit);
+}

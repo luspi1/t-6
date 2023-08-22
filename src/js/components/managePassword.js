@@ -1,12 +1,5 @@
 const showPasswordButtons = document.querySelectorAll('.btn-show-pass');
 
-const submitEnterButton = document.querySelector('.submit-enter');
-const resetPasswordForm = document.querySelector('.reset-password-form');
-const resetPasswordButton = document.querySelector('.reset-password-button');
-
-const smsTimer = document.querySelector('#smsTimer');
-let smsSeconds = smsTimer.innerHTML.split(':')[1];
-
 if (showPasswordButtons) {
   showPasswordButtons.forEach((item) => {
     item.addEventListener('click', () => {
@@ -21,16 +14,39 @@ if (showPasswordButtons) {
   });
 }
 
-if (resetPasswordButton) {
+const timer = () => {
+  const smsTimer = document.querySelector('#smsTimer');
+  smsTimer.innerHTML = '0:30';
+
+  let smsSeconds = smsTimer.innerHTML.split(':')[1];
+
+  const smsIntervalId = setInterval(() => {
+    smsSeconds--;
+    if (smsSeconds === 0) clearInterval(smsIntervalId);
+    smsTimer.innerHTML = `0:${smsSeconds}`;
+  }, 1000);
+
+  return smsIntervalId;
+};
+
+export const initResetPassword = () => {
+  document.querySelector('.submit-enter').classList.remove('_disabled');
+  document.querySelector('.reset-password-form').style.display = 'none';
+  const resetPasswordButton = document.querySelector('.reset-password-button');
+
   resetPasswordButton.addEventListener('click', () => {
-    submitEnterButton.classList.add('disabled');
+    document.querySelector('.submit-enter').classList.add('_disabled');
+    document.querySelector('.reset-password-form').style.display = 'block';
 
-    resetPasswordForm.style.display = 'block';
+    document
+      .querySelector('.home-registration__reg-form')
+      .classList.add('_long-form');
 
-    const smsIntervalId = setInterval(() => {
-      smsSeconds--;
-      if (smsSeconds === 0) clearInterval(smsIntervalId);
-      smsTimer.innerHTML = `0:${smsSeconds}`;
-    }, 1000);
+    const id = timer();
+    for (let i = 0; i < id; i++) {
+      clearInterval(i);
+    }
   });
-}
+};
+
+initResetPassword();
