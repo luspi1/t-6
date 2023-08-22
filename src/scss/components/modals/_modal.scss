@@ -85,6 +85,21 @@
     [type="submit"] {
         margin-top: 20px;
     }
+
+    label {
+        margin-bottom: 8px;
+        @include montserrat-regular;
+        font-size: 13px;
+
+        &.required {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: " *";
+            }
+        }
+    }
 }
 
 .modal-overlay {
@@ -122,20 +137,7 @@
         }
     }
 
-    label {
-        margin-bottom: 8px;
-        @include montserrat-regular;
-        font-size: 13px;
 
-        &.required {
-            position: relative;
-
-            &::after {
-                position: absolute;
-                content: "*";
-            }
-        }
-    }
 
     input {
         width: 100%;
