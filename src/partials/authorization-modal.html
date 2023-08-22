@@ -51,6 +51,7 @@
           placeholder="example@example.com"
           name="auth_user_email"
           required
+          autocomplete="off"
         />
       </p>
       <p class="input-container password">
@@ -89,7 +90,7 @@
     <button class="blue-btn submit-enter" type="submit">Войти</button>
   </form>
 
-  <form class="reset-password-form styled-form" action="#">
+  <form class="reset-password-form styled-form hidden" action="#">
     <p>
       Код отправлен в виде SMS. Повторить отправку через
       <span id="smsTimer">0:30</span>

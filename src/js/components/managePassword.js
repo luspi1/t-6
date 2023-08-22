@@ -1,4 +1,7 @@
+import { SMS_SECONDS_START_VALUE, TIME_INTERVAL_MILLISECONDS } from '../_vars';
 const showPasswordButtons = document.querySelectorAll('.btn-show-pass');
+
+const registrationForm = document.querySelector('.home-registration__reg-form');
 
 if (showPasswordButtons) {
   showPasswordButtons.forEach((item) => {
@@ -16,33 +19,27 @@ if (showPasswordButtons) {
 
 const timer = () => {
   const smsTimer = document.querySelector('#smsTimer');
-  smsTimer.innerHTML = '0:30';
+  smsTimer.innerHTML = `0:${SMS_SECONDS_START_VALUE}`;
 
-  let smsSeconds = smsTimer.innerHTML.split(':')[1];
+  let smsSeconds = SMS_SECONDS_START_VALUE;
 
   const smsIntervalId = setInterval(() => {
     smsSeconds--;
     if (smsSeconds === 0) clearInterval(smsIntervalId);
     smsTimer.innerHTML = `0:${smsSeconds}`;
-  }, 1000);
+  }, TIME_INTERVAL_MILLISECONDS);
 
   return smsIntervalId;
 };
 
 export const getSmsCode = () => {
-  const submitButton = document.querySelector('.submit-enter');
+  registrationForm.querySelector('.submit-enter').classList.remove('_disabled');
 
-  submitButton.classList.remove('_disabled');
-  document.querySelector('.reset-password-form').style.display = 'none';
-
-  submitButton.addEventListener('click', (e) => {
+  registrationForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    document.querySelector('.submit-enter').classList.add('_disabled');
-    document.querySelector('.reset-password-form').style.display = 'block';
 
-    document
-      .querySelector('.home-registration__reg-form')
-      .classList.add('_long-form');
+    registrationForm.querySelector('.submit-enter').classList.add('_disabled');
+    registrationForm.nextElementSibling.classList.remove('hidden');
 
     const id = timer();
     for (let i = 0; i < id; i++) {
