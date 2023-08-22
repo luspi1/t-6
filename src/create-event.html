@@ -5,9 +5,15 @@
   <body class="page__body create-event">
     <div class="site-container">
       <div class="modal-overlay"></div>
+
       @include('partials/authorization-modal.html')
-      @include('partials/quick-registration-modal.html')
       @include('partials/user-registration-modal.html')
+      @include('partials/user-reset-password-modal.html')
+      @include('partials/organizer-registration-modal.html')
+      @include('partials/organizer-reset-password-modal.html')
+      @include('partials/group-registration-modal.html')
+      @include('partials/group-reset-password-modal.html')
+      @include('partials/quick-registration-modal.html')
       @include('partials/header.html')
       <main class="main">
         <div class="main-container">
