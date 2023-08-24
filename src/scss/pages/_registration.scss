@@ -1,34 +1,20 @@
 .registration {
   .event {
-    margin-bottom: 70px;
-
-    h1 {
-      font-size: 23px;
-      font-weight: 600;
-      margin-right: 10px;
-    }
-
-    &__top {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 24px;
-    }
 
     .big-form {
+
       &__show-wrapper {
+
         >h4 {
           margin-bottom: 12px;
           padding-top: 20px;
           font-size: 15px;
-          font-style: normal;
           font-weight: 500;
           line-height: normal;
-          border-top: 1px solid #E3DDDD;
         }
 
         >p {
           margin-bottom: 20px;
-
         }
 
         >.custom-checkbox {
@@ -230,9 +216,6 @@
           margin-top: 5px;
         }
       }
-
-
     }
-
   }
 }

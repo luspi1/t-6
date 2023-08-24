@@ -289,3 +289,39 @@ h1 {
 .optional-block-container [type="checkbox"]:not(:checked)~.optional-block {
   display: none;
 }
+
+// МЕНЮ ДЛЯ ПЕРЕКЛЮЧЕНИЯ СТРАНИЦ НА КАЖДОЙ СТРАНИЦЕ
+.content {
+  .event {
+    margin-bottom: 70px;
+
+    h1 {
+      font-size: 23px;
+      font-weight: 600;
+      margin-right: 10px;
+    }
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+////////
+
+.big-form__star {
+  border-bottom: 1px solid #E3DDDD;
+  margin-bottom: 17px;
+  padding-bottom: 17px;
+}
+
+.big-form__title-description {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #E3DDDD;
+}
+
+.grey-border-bottom {
+  border-bottom: 1px solid #E3DDDD;
+}

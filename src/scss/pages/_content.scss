@@ -1,24 +1,5 @@
 .content-page {
-    .big-form__star {
-        border-bottom: 1px solid #E3DDDD;
-        margin-bottom: 17px;
-        padding-bottom: 17px;
-    }
-
     .event {
-        margin-bottom: 70px;
-
-        h1 {
-            font-size: 23px;
-            font-weight: 600;
-            margin-right: 10px;
-        }
-
-        &__top {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 24px;
-        }
 
         .big-form {
             &__show-wrapper {
@@ -250,21 +231,23 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-    }
 
-    input {
-        margin-top: 8px;
-        width: 100%;
-        padding: 9px;
-        border: 1px solid #E3DDDD;
-        border-bottom-color: #868585;
-        border-radius: 3px;
+        input {
+            margin-top: 8px;
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #E3DDDD;
+            border-bottom-color: #868585;
+            border-radius: 3px;
 
-        &::placeholder {
-            font-size: 13px;
-            line-height: 16px;
+            &::placeholder {
+                font-size: 13px;
+                line-height: 16px;
+            }
         }
     }
+
+
 
     .document-item {
         display: flex;
@@ -287,7 +270,6 @@
             }
 
             .dz-filename {
-                //order: 10;
                 @include montserrat-regular;
                 font-size: 13px;
                 line-height: 16px;
@@ -322,6 +304,7 @@
     }
 
     .document-download {
+        padding-bottom: 5px;
         max-width: 350px;
         margin-top: 30px;
         font-size: 13px;
