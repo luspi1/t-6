@@ -263,7 +263,7 @@
                     <a href="content.html">Контент</a>
                   </li>
                   <li class="navigation-row__item">
-                    <a href="#">Локации</a>
+                    <a href="locations.html">Локации</a>
                   </li>
                   <li class="navigation-row__item">
                     <a href="#">Расписание</a>
@@ -278,7 +278,7 @@
                   поля, отмеченные символом *, обязательны для заполнения
                 </p>
                 <h2>Атмановские Кулачки 2023</h2>
-                <p>
+                <p class="big-form__title-description">
                   26 августа 2023 года — 28 августа 2023 года, с. Атманов Угол
                   Тамбовской области
                 </p>
@@ -296,7 +296,7 @@
                     >
                   </div>
                   <ul data-list="changeable" data-changeable-id="true">
-                    <li>
+                    <li class="changeable-item">
                       <ul class="big-form__list">
                         <li><h3>Билет 1</h3></li>
                         <li class="big-form__item">
@@ -741,9 +741,11 @@
     </div>
 
     <template id="new-ticket">
-      <li data-changeable-id="true">
+      <li class="changeable-item" data-changeable-id="true">
         <ul class="big-form__list">
-          <li><h3>Билет 2</h3></li>
+          <li>
+            <h3>Билет <span class="changeable-serial-number"></span></h3>
+          </li>
           <li class="big-form__item">
             <div class="big-form__wrapper">
               <label>Название билета *</label>
