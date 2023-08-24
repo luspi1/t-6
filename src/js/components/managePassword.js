@@ -32,20 +32,20 @@ const timer = () => {
   return smsIntervalId;
 };
 
+const handleSmsSubmit = (e) => {
+  e.preventDefault();
+  e.currentTarget.querySelector('.submit-enter').classList.add('_disabled');
+  e.currentTarget.nextElementSibling.classList.remove('hidden');
+  const timerId = e.currentTarget.dataset.timer;
+  if (timerId) clearInterval(timerId);
+  const id = timer();
+  e.currentTarget.setAttribute('data-timer', id);
+};
+
 export const getSmsCode = () => {
   registrationForm.querySelector('.submit-enter').classList.remove('_disabled');
-
-  registrationForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    registrationForm.querySelector('.submit-enter').classList.add('_disabled');
-    registrationForm.nextElementSibling.classList.remove('hidden');
-
-    const id = timer();
-    for (let i = 0; i < id; i++) {
-      clearInterval(i);
-    }
-  });
+  registrationForm.removeEventListener('submit', handleSmsSubmit);
+  registrationForm.addEventListener('submit', handleSmsSubmit);
 };
 
 getSmsCode();

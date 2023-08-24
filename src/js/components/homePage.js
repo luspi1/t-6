@@ -58,6 +58,7 @@ if (createEventButton) {
 window.addEventListener('click', (e) => {
   const target = e.target;
   if (
+    eventModal &&
     !target.closest('.events__modal') &&
     !target.closest('.events__link._create')
   ) {
@@ -92,8 +93,6 @@ if (homeRegForm) {
   );
 
   homeStateSelect.addEventListener('change', (e) => {
-    console.log('CHANGE');
-
     let stateId = e.target.value;
     changeHomeRegContent(stateId, homeRegFormContent);
 

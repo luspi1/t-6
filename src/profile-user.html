@@ -373,8 +373,8 @@
                   <li class="big-form__item border-bottom column">
                     <h3>Аватар или фото *</h3>
                     <p>соотношение сторон 1:1 или 3:4, JPEG, PNG</p>
-                    <div class="big-form__dropzone-wrapper" id="profile-logo">
-                      <div class="big-form__dropzone-left">
+                    <div class="dropzone-wrapper" id="profile-logo">
+                      <div class="dropzone-left">
                         <svg
                           width="30"
                           height="21"
@@ -403,23 +403,21 @@
                             fill="#292F35"
                           />
                         </svg>
-                        <p>
+                        <p class="dropzone-hide">
                           Перетащите изображение<br />
                           на это поле
                         </p>
                       </div>
-                      <div class="big-form__dropzone-right">
+                      <div class="dropzone-right">
                         <p>
                           Файл
-                          <span class="big-form__dropzone-hide"
-                            >еще не загружен</span
-                          >
+                          <span class="dropzone-hide">еще не загружен</span>
                         </p>
-                        <p class="big-form__dropzone-hide">
+                        <p class="dropzone-hide">
                           Перетащите его на поле слева или нажмите на ссылку
                         </p>
-                        <div class="big-form__dropzone-previews"></div>
-                        <button class="big-form__btn-add-logo" type="button">
+                        <div class="dropzone-previews"></div>
+                        <button class="btn-add-logo" type="button">
                           Загрузить
                         </button>
                       </div>
