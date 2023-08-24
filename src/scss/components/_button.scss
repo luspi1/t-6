@@ -26,7 +26,9 @@ button {
     }
 }
 
+
 .white-btn {
+    padding: 0 15px;
     color: $blue;
 }
 
@@ -36,4 +38,13 @@ button {
     right: 0px;
     top: 0px;
     z-index: 1000;
+}
+
+.btn-cancel {
+    margin-left: auto;
+    padding: 0 15px;
+    border-radius: 3px;
+    border: 1px solid #EF3B4C;
+    background: #FFF;
+    color: #EF3B4C;
 }
