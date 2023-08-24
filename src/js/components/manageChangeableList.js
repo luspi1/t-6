@@ -43,9 +43,8 @@ export const initChangeableLists = () => {
         );
 
         changeableLists.forEach((list) => {
-          const listEls = list.querySelectorAll('li');
+          const listEls = list.querySelectorAll('li.changeable-item');
 
-          console.log(listEls);
           updateSerialNumbers(listEls);
         });
       }
