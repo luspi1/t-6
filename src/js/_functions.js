@@ -1,83 +1,82 @@
 // Обрезка длинного текста на определенную длину
-import { bigImgModal, infoModal, modalOverlay } from './_vars'
-
-
+import { bigImgModal, infoModal, modalOverlay } from './_vars';
 
 //Сбор данных форм
 
 export const serializeForm = (formNode) => {
-  return new FormData(formNode)
-}
+  return new FormData(formNode);
+};
 
 // Преобразование formData в объект
 export const formToObj = (formData) => {
-  return Array.from(formData.entries()).reduce((memo, pair) => ({
-    ...memo,
-    [pair[0]]: pair[1],
-  }), {})
-}
+  return Array.from(formData.entries()).reduce(
+    (memo, pair) => ({
+      ...memo,
+      [pair[0]]: pair[1],
+    }),
+    {},
+  );
+};
 
 // Функция показа модалки большой картинки
 
 export const showBigImgModal = (path) => {
-  bigImgModal.classList.add('big-img-modal_active')
-  bigImgModal.querySelector('img').src = path
-  modalOverlay.classList.add('modal-overlay_active')
+  bigImgModal.classList.add('big-img-modal_active');
+  bigImgModal.querySelector('img').src = path;
+  modalOverlay.classList.add('modal-overlay_active');
   modalOverlay.addEventListener('click', () => {
-    modalOverlay.classList.remove('modal-overlay_active')
-    bigImgModal.classList.remove('big-img-modal_active')
-  })
-}
+    modalOverlay.classList.remove('modal-overlay_active');
+    bigImgModal.classList.remove('big-img-modal_active');
+  });
+};
 
 // Обновление id в изменяемых списках
 export const updateChangeableListId = (changeableList) => {
   if (changeableList && changeableList.dataset.changeableId) {
-    const changeableElements = Array.from(changeableList.children)
+    const changeableElements = Array.from(changeableList.children);
     changeableElements.forEach((el, i) => {
-      const changeableId = i + 1
+      const changeableId = i + 1;
 
-      const changeableAmount = el.querySelector('.changeable-amount')
-      const changeableInput = el.querySelector('.changeable-input')
+      const changeableAmount = el.querySelector('.changeable-amount');
+      const changeableInput = el.querySelector('.changeable-input');
 
       if (changeableAmount) {
-        changeableAmount.textContent = changeableId
+        changeableAmount.textContent = changeableId;
       }
 
       if (changeableInput) {
-        const input = changeableInput.querySelector('input')
-        const inputLabel = changeableInput.querySelector('label')
+        const input = changeableInput.querySelector('input');
+        const inputLabel = changeableInput.querySelector('label');
 
-        input.value = changeableId
-        input.id = changeableId
-        inputLabel.setAttribute("for", changeableId)
+        input.value = changeableId;
+        input.id = changeableId;
+        inputLabel.setAttribute('for', changeableId);
       }
-
-    })
+    });
   }
-}
-
+};
 
 // Блокировка/разблокировка добавления/удаления элементов в изменяемых списках при ограничении максимального количества
 
 export const limitationChangeableElements = (changeableList, addBtn) => {
   if (changeableList && addBtn && changeableList.dataset.maxElements) {
-    const countMaxElements = +changeableList.dataset.maxElements
+    const countMaxElements = +changeableList.dataset.maxElements;
 
     if (changeableList.children.length >= countMaxElements) {
-      addBtn.classList.add('hidden')
+      addBtn.classList.add('hidden');
     } else {
-      addBtn.classList.remove('hidden')
+      addBtn.classList.remove('hidden');
     }
   }
-}
+};
 
 // Фунцкия отправки fetch запросов
-export async function sendData (data, url) {
+export async function sendData(data, url) {
   return await fetch(url, {
     method: 'POST',
-    headers: {'Content-Type': 'multipart/form-data'},
+    headers: { 'Content-Type': 'multipart/form-data' },
     body: data,
-  })
+  });
 }
 
 // показ/скрытие модалки ошибки
@@ -85,14 +84,13 @@ export async function sendData (data, url) {
 export const showInfoModal = (responseText) => {
   infoModal.addEventListener('click', (e) => {
     if (e.target.classList.contains('info-modal')) {
-      infoModal.classList.add('hidden')
+      infoModal.classList.add('hidden');
     }
-
-  })
-  const modalText = infoModal.querySelector('.info-modal__content-text')
-  modalText.textContent = responseText
-  infoModal.classList.remove('hidden')
-}
+  });
+  const modalText = infoModal.querySelector('.info-modal__content-text');
+  modalText.textContent = responseText;
+  infoModal.classList.remove('hidden');
+};
 
 export const getNoun = (number, one, two, five) => {
   let n = Math.abs(number);
@@ -108,4 +106,17 @@ export const getNoun = (number, one, two, five) => {
     return two;
   }
   return five;
+};
+
+//////
+
+const locationsWarningCloseButton = document.querySelector(
+  '.locations-warning button',
+);
+if (locationsWarningCloseButton) {
+  locationsWarningCloseButton.addEventListener('click', () => {
+    locationsWarningCloseButton
+      .closest('.locations-warning')
+      .classList.add('hidden');
+  });
 }
