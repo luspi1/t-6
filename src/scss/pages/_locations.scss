@@ -1,0 +1,31 @@
+.locations-page {
+    .set-locations-checkbox-container {
+        padding: 20px 0 9px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .locations-warning {
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        @include montserrat-regular;
+        font-size: 13px;
+        line-height: 16px;
+        color: #EF3B4C;
+
+        background: #FFF9F9;
+        border: 1px dashed #FFBBC1;
+        border-radius: 3px;
+
+        button {
+            margin-left: 12px;
+            display: flex;
+        }
+    }
+
+    .big-form__wrapper .custom-select {
+        width: 100%;
+    }
+}

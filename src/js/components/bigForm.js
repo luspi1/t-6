@@ -125,28 +125,28 @@ if (changeableLists) {
 }
 
 // Добавление элементов в изменяемых списках
-const addToListBtns = document.querySelectorAll('button[data-btn="add"]');
+// const addToListBtns = document.querySelectorAll('button[data-btn="add"]');
 
-if (addToListBtns) {
-  addToListBtns.forEach((addBtn) => {
-    addBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const templateId = e.currentTarget.dataset.template;
-      let templateFragment = document.querySelector(`#${templateId}`)?.content;
-      let templateElement = templateFragment.firstElementChild.cloneNode(true);
-      const targetChangeableList = e.currentTarget.parentElement.querySelector(
-        'ul[data-list="changeable"]',
-      );
-      targetChangeableList.appendChild(templateElement);
-      limitationChangeableElements(targetChangeableList, addBtn);
-      updateChangeableListId(targetChangeableList);
-      initSelects();
-      if (tickets) {
-        showTicketsBlock();
-      }
-    });
-  });
-}
+// if (addToListBtns) {
+//   addToListBtns.forEach((addBtn) => {
+//     addBtn.addEventListener('click', (e) => {
+//       e.preventDefault();
+//       const templateId = e.currentTarget.dataset.template;
+//       let templateFragment = document.querySelector(`#${templateId}`)?.content;
+//       let templateElement = templateFragment.firstElementChild.cloneNode(true);
+//       const targetChangeableList = e.currentTarget.parentElement.querySelector(
+//         'ul[data-list="changeable"]',
+//       );
+//       targetChangeableList.appendChild(templateElement);
+//       limitationChangeableElements(targetChangeableList, addBtn);
+//       updateChangeableListId(targetChangeableList);
+//       initSelects();
+//       if (tickets) {
+//         showTicketsBlock();
+//       }
+//     });
+//   });
+// }
 
 //валидация пароля
 
@@ -206,3 +206,7 @@ if (secondInputPass) {
     }
   });
 }
+
+
+
+

@@ -1,7 +1,8 @@
 .navigation-row {
   height: 35px;
   display: flex;
-   flex-wrap: wrap;
+  flex-wrap: wrap;
+
   &__item {
     flex-shrink: 0;
     height: 100%;

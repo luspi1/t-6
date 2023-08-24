@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ru" class="page">
-  @include('partials/head.html', { 'title': 'Контент' })
+  @include('partials/head.html', { 'title': 'Локации' })
 
-  <body class="page__body content-page">
+  <body class="page__body locations-page">
     <div class="site-container">
       <div class="modal-overlay"></div>
 
@@ -248,7 +248,7 @@
           <div class="content">
             <section class="section event">
               <div class="event__top">
-                <h1>Контент</h1>
+                <h1>Локации</h1>
                 <ul class="navigation-row">
                   <li class="navigation-row__item">
                     <a href="create-event.html">Профиль события</a>
@@ -259,11 +259,11 @@
                   <li class="navigation-row__item">
                     <a href="tickets.html">Билеты и допуски</a>
                   </li>
-                  <li class="navigation-row__item _active">
-                    <a href="#">Контент</a>
-                  </li>
                   <li class="navigation-row__item">
-                    <a href="locations.html">Локации</a>
+                    <a href="content.html">Контент</a>
+                  </li>
+                  <li class="navigation-row__item _active">
+                    <a href="#">Локации</a>
                   </li>
                   <li class="navigation-row__item">
                     <a href="#">Расписание</a>
@@ -283,296 +283,171 @@
                   Тамбовской области
                 </p>
                 <div class="big-form__show-wrapper">
-                  <ul>
-                    <li class="dropzone-item grey-border-bottom">
-                      <h3>Логотип *</h3>
-                      <p>соотношение сторон 1:1 или 1:2, JPEG, PNG, SVG</p>
-
-                      <div class="dropzone-wrapper">
-                        <div class="dropzone-left">
-                          <svg
-                            width="30"
-                            height="21"
-                            viewBox="0 0 30 21"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M27.9213 0H2.07723C0.930008 0 0 0.930008 0 2.07723V18.8413C0 19.9885 0.930008 20.9186 2.07723 20.9186H27.9213C29.0685 20.9186 29.9985 19.9885 29.9985 18.8413V2.07723C29.9985 0.930008 29.0685 0 27.9213 0Z"
-                              fill="#F3F5F6"
-                            />
-                            <path
-                              d="M9.94062 8.59761C11.3824 8.59761 12.5512 7.42884 12.5512 5.98707C12.5512 4.54531 11.3824 3.37653 9.94062 3.37653C8.49886 3.37653 7.33008 4.54531 7.33008 5.98707C7.33008 7.42884 8.49886 8.59761 9.94062 8.59761Z"
-                              fill="#292F35"
-                            />
-                            <path
-                              d="M8.78937 8.33005C9.59531 8.33005 10.2487 7.28107 10.2487 5.98709C10.2487 4.69312 9.59531 3.64414 8.78937 3.64414C7.98342 3.64414 7.33008 4.69312 7.33008 5.98709C7.33008 7.28107 7.98342 8.33005 8.78937 8.33005Z"
-                              fill="#C6C6C6"
-                            />
-                            <path
-                              d="M18.5482 20.9186H1.96335C1.44269 20.9184 0.943398 20.7115 0.575234 20.3433C0.207071 19.9752 0.000164949 19.4759 0 18.9552V15.3739L4.77427 12.0172C5.03395 11.8349 5.34439 11.7388 5.66166 11.7426C5.97893 11.7464 6.28698 11.8499 6.54222 12.0384L18.5482 20.9186Z"
-                              fill="#C6C6C6"
-                            />
-                            <path
-                              d="M21.8726 9.09296L30.001 14.0048V18.891C30.0009 19.4288 29.7871 19.9445 29.4068 20.3247C29.0265 20.7049 28.5107 20.9185 27.973 20.9185H3.73633L18.547 9.29831C19.0151 8.93081 19.5838 8.71435 20.1778 8.67767C20.7718 8.64099 21.3629 8.78583 21.8726 9.09296Z"
-                              fill="#292F35"
-                            />
-                          </svg>
-                          <p class="dropzone-hide">
-                            Перетащите изображение<br />
-                            на это поле
-                          </p>
-                        </div>
-                        <div class="dropzone-right">
-                          <p>
-                            Файл
-                            <span class="dropzone-hide">еще не загружен</span>
-                          </p>
-                          <p class="dropzone-hide">
-                            Перетащите его на поле слева или нажмите на ссылку
-                          </p>
-                          <div class="dropzone-previews"></div>
-                          <button class="btn-add-logo" type="button">
-                            Загрузить
-                          </button>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li class="dropzone-item grey-border-bottom">
-                      <h3>Упрощенный логотип</h3>
-                      <p>соотношение сторон 1:1 или 1:2, JPEG, PNG, SVG</p>
-                      <div class="dropzone-wrapper">
-                        <div class="dropzone-left">
-                          <svg
-                            width="30"
-                            height="21"
-                            viewBox="0 0 30 21"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M27.9213 0H2.07723C0.930008 0 0 0.930008 0 2.07723V18.8413C0 19.9885 0.930008 20.9186 2.07723 20.9186H27.9213C29.0685 20.9186 29.9985 19.9885 29.9985 18.8413V2.07723C29.9985 0.930008 29.0685 0 27.9213 0Z"
-                              fill="#F3F5F6"
-                            />
-                            <path
-                              d="M9.94062 8.59761C11.3824 8.59761 12.5512 7.42884 12.5512 5.98707C12.5512 4.54531 11.3824 3.37653 9.94062 3.37653C8.49886 3.37653 7.33008 4.54531 7.33008 5.98707C7.33008 7.42884 8.49886 8.59761 9.94062 8.59761Z"
-                              fill="#292F35"
-                            />
-                            <path
-                              d="M8.78937 8.33005C9.59531 8.33005 10.2487 7.28107 10.2487 5.98709C10.2487 4.69312 9.59531 3.64414 8.78937 3.64414C7.98342 3.64414 7.33008 4.69312 7.33008 5.98709C7.33008 7.28107 7.98342 8.33005 8.78937 8.33005Z"
-                              fill="#C6C6C6"
-                            />
-                            <path
-                              d="M18.5482 20.9186H1.96335C1.44269 20.9184 0.943398 20.7115 0.575234 20.3433C0.207071 19.9752 0.000164949 19.4759 0 18.9552V15.3739L4.77427 12.0172C5.03395 11.8349 5.34439 11.7388 5.66166 11.7426C5.97893 11.7464 6.28698 11.8499 6.54222 12.0384L18.5482 20.9186Z"
-                              fill="#C6C6C6"
-                            />
-                            <path
-                              d="M21.8726 9.09296L30.001 14.0048V18.891C30.0009 19.4288 29.7871 19.9445 29.4068 20.3247C29.0265 20.7049 28.5107 20.9185 27.973 20.9185H3.73633L18.547 9.29831C19.0151 8.93081 19.5838 8.71435 20.1778 8.67767C20.7718 8.64099 21.3629 8.78583 21.8726 9.09296Z"
-                              fill="#292F35"
-                            />
-                          </svg>
-                          <p class="dropzone-hide">
-                            Перетащите изображение<br />
-                            на это поле
-                          </p>
-                        </div>
-                        <div class="dropzone-right">
-                          <p>
-                            Файл
-                            <span class="dropzone-hide">еще не загружен</span>
-                          </p>
-                          <p class="dropzone-hide">
-                            Перетащите его на поле слева или нажмите на ссылку
-                          </p>
-                          <div class="dropzone-previews"></div>
-                          <button class="btn-add-logo" type="button">
-                            Загрузить
-                          </button>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li class="dropzone-item grey-border-bottom">
-                      <h3>Афиша *</h3>
-                      <p>А4 альбомн. или книж., JPEG, PNG, SVG</p>
-                      <div class="dropzone-wrapper">
-                        <div class="dropzone-left">
-                          <svg
-                            width="30"
-                            height="21"
-                            viewBox="0 0 30 21"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M27.9213 0H2.07723C0.930008 0 0 0.930008 0 2.07723V18.8413C0 19.9885 0.930008 20.9186 2.07723 20.9186H27.9213C29.0685 20.9186 29.9985 19.9885 29.9985 18.8413V2.07723C29.9985 0.930008 29.0685 0 27.9213 0Z"
-                              fill="#F3F5F6"
-                            />
-                            <path
-                              d="M9.94062 8.59761C11.3824 8.59761 12.5512 7.42884 12.5512 5.98707C12.5512 4.54531 11.3824 3.37653 9.94062 3.37653C8.49886 3.37653 7.33008 4.54531 7.33008 5.98707C7.33008 7.42884 8.49886 8.59761 9.94062 8.59761Z"
-                              fill="#292F35"
-                            />
-                            <path
-                              d="M8.78937 8.33005C9.59531 8.33005 10.2487 7.28107 10.2487 5.98709C10.2487 4.69312 9.59531 3.64414 8.78937 3.64414C7.98342 3.64414 7.33008 4.69312 7.33008 5.98709C7.33008 7.28107 7.98342 8.33005 8.78937 8.33005Z"
-                              fill="#C6C6C6"
-                            />
-                            <path
-                              d="M18.5482 20.9186H1.96335C1.44269 20.9184 0.943398 20.7115 0.575234 20.3433C0.207071 19.9752 0.000164949 19.4759 0 18.9552V15.3739L4.77427 12.0172C5.03395 11.8349 5.34439 11.7388 5.66166 11.7426C5.97893 11.7464 6.28698 11.8499 6.54222 12.0384L18.5482 20.9186Z"
-                              fill="#C6C6C6"
-                            />
-                            <path
-                              d="M21.8726 9.09296L30.001 14.0048V18.891C30.0009 19.4288 29.7871 19.9445 29.4068 20.3247C29.0265 20.7049 28.5107 20.9185 27.973 20.9185H3.73633L18.547 9.29831C19.0151 8.93081 19.5838 8.71435 20.1778 8.67767C20.7718 8.64099 21.3629 8.78583 21.8726 9.09296Z"
-                              fill="#292F35"
-                            />
-                          </svg>
-                          <p class="dropzone-hide">
-                            Перетащите изображение<br />
-                            на это поле
-                          </p>
-                        </div>
-                        <div class="dropzone-right">
-                          <p>
-                            Файл
-                            <span class="dropzone-hide">еще не загружен</span>
-                          </p>
-                          <p class="dropzone-hide">
-                            Перетащите его на поле слева или нажмите на ссылку
-                          </p>
-                          <div class="dropzone-previews"></div>
-                          <button class="btn-add-logo" type="button">
-                            Загрузить
-                          </button>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li class="dropzone-item">
-                      <h3>Картинка для сайта</h3>
-                      <p>соотношение сторон 16:10, JPEG, PNG</p>
-                      <div class="dropzone-wrapper">
-                        <div class="dropzone-left">
-                          <svg
-                            width="30"
-                            height="21"
-                            viewBox="0 0 30 21"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M27.9213 0H2.07723C0.930008 0 0 0.930008 0 2.07723V18.8413C0 19.9885 0.930008 20.9186 2.07723 20.9186H27.9213C29.0685 20.9186 29.9985 19.9885 29.9985 18.8413V2.07723C29.9985 0.930008 29.0685 0 27.9213 0Z"
-                              fill="#F3F5F6"
-                            />
-                            <path
-                              d="M9.94062 8.59761C11.3824 8.59761 12.5512 7.42884 12.5512 5.98707C12.5512 4.54531 11.3824 3.37653 9.94062 3.37653C8.49886 3.37653 7.33008 4.54531 7.33008 5.98707C7.33008 7.42884 8.49886 8.59761 9.94062 8.59761Z"
-                              fill="#292F35"
-                            />
-                            <path
-                              d="M8.78937 8.33005C9.59531 8.33005 10.2487 7.28107 10.2487 5.98709C10.2487 4.69312 9.59531 3.64414 8.78937 3.64414C7.98342 3.64414 7.33008 4.69312 7.33008 5.98709C7.33008 7.28107 7.98342 8.33005 8.78937 8.33005Z"
-                              fill="#C6C6C6"
-                            />
-                            <path
-                              d="M18.5482 20.9186H1.96335C1.44269 20.9184 0.943398 20.7115 0.575234 20.3433C0.207071 19.9752 0.000164949 19.4759 0 18.9552V15.3739L4.77427 12.0172C5.03395 11.8349 5.34439 11.7388 5.66166 11.7426C5.97893 11.7464 6.28698 11.8499 6.54222 12.0384L18.5482 20.9186Z"
-                              fill="#C6C6C6"
-                            />
-                            <path
-                              d="M21.8726 9.09296L30.001 14.0048V18.891C30.0009 19.4288 29.7871 19.9445 29.4068 20.3247C29.0265 20.7049 28.5107 20.9185 27.973 20.9185H3.73633L18.547 9.29831C19.0151 8.93081 19.5838 8.71435 20.1778 8.67767C20.7718 8.64099 21.3629 8.78583 21.8726 9.09296Z"
-                              fill="#292F35"
-                            />
-                          </svg>
-                          <p class="dropzone-hide">
-                            Перетащите изображение<br />
-                            на это поле
-                          </p>
-                        </div>
-                        <div class="dropzone-right">
-                          <p>
-                            Файл
-                            <span class="dropzone-hide">еще не загружен</span>
-                          </p>
-                          <p class="dropzone-hide">
-                            Перетащите его на поле слева или нажмите на ссылку
-                          </p>
-                          <div class="dropzone-previews"></div>
-                          <button class="btn-add-logo" type="button">
-                            Загрузить
-                          </button>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="documents dropzone-wrapper">
-                  <div class="document-item">
-                    <p class="input-container">
-                      <label for="content-docs-1">Документ 1</label>
+                  <div class="set-locations-checkbox-container">
+                    <div class="custom-checkbox">
                       <input
-                        id="content-docs-1"
-                        type="text"
-                        placeholder="название, например, Регламент соревнований"
-                        name="content_docs_1"
-                        autocomplete="off"
+                        checked
+                        type="checkbox"
+                        name="open_location_set"
+                        id="open-location-set"
+                        data-show-list
                       />
-                    </p>
+                      <label for="open-location-set"
+                        >Включить набор локаций</label
+                      >
+                    </div>
 
-                    <div class="document-dropzone">
-                      <div class="dropzone-previews"></div>
-                    <p class="document-download dropzone-hide">
-                      <button type="button">Загрузить файл с компьютера</button>
-                      в формате PDF
-                    </p>
-                    </div>                    
-                  </div>
-
-                  <div class="document-item">
-                    <p class="input-container">
-                      <label for="content-docs-2">Документ 2</label>
-                      <input
-                        id="content-docs-2"
-                        type="text"
-                        placeholder="название, например, Условия участия"
-                        name="content_docs_2"
-                        autocomplete="off"
-                      />
-                    </p>
-                    <div class="document-dropzone">
-                      <div class="dropzone-previews"></div>
-                    <p class="document-download dropzone-hide">
-                      <button type="button">Загрузить файл с компьютера</button>
-                      в формате PDF
-                    </p>
-                    </div> 
-                  </div>
-
-                  <div class="document-item">
-                    <p class="input-container">
-                      <label for="content-docs-3">Документ 3</label>
-                      <input
-                        id="content-docs-3"
-                        type="text"
-                        value="Сценарий проведения мероприятия"
-                        name="content_docs_3"
-                        autocomplete="off"
-                      />
-                    </p>
-
-                    <div class="document-dropzone">
-                      <div class="dropzone-previews"></div>
-                    <p class="document-download dropzone-hide">
-                      <button type="button">Загрузить файл с компьютера</button>
-                      в формате PDF
-                    </p>
+                    <div class="locations-warning">
+                      <p>
+                        ВНИМАНИЕ! Для того, чтобы указывать доступные локации в
+                        билете, их нужно создать в этом разделе!
+                      </p>
+                      <button aria-label="Закрыть предупреждение">
+                        <svg
+                          width="13"
+                          height="12"
+                          viewBox="0 0 13 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            width="16.2428"
+                            height="0.649711"
+                            transform="matrix(0.706025 -0.708187 0.706025 0.708187 1.07422 11.5399)"
+                            fill="#EF3B4C"
+                          />
+                          <rect
+                            width="16.2428"
+                            height="0.649711"
+                            transform="matrix(-0.706025 -0.708187 0.706025 -0.708187 12.4668 11.963)"
+                            fill="#EF3B4C"
+                          />
+                        </svg>
+                      </button>
                     </div>
                   </div>
-                </div>
 
-                <div class="foto-galery">
-                  <p class="foto-galery-title">Фотогалерея (<span>0</span>/10)</p>               
-                  <div class="dropzone-previews"></div>
-                  <p class="galery-download dropzone-hide"></p>
-                    <button class="foto-gallery-button btn-add-logo" type="button">Добавить фото</button>
-                  </p>
+                  <ul data-list="changeable" data-changeable-id="true">
+                    <li class="changeable-item">
+                      <ul class="big-form__list">
+                        <li><h3>Локация 1</h3></li>
+                        <li class="big-form__item">
+                          <div class="big-form__wrapper">
+                            <label>Название локации *</label>
+                            <input
+                              name="location-name"
+                              type="text"
+                              placeholder="Полное название локации"
+                              required
+                            />
+                          </div>
+                          <div class="big-form__description">
+                            <p>
+                              Например, гостиница Айсылу, конференц-зал или
+                              стадион им. Суеуебаева, трибуны
+                            </p>
+                          </div>
+                        </li>
+                        <li class="big-form__item">
+                          <div class="big-form__wrapper">
+                            <label>Описание</label>
+                            <input
+                              name="location-description"
+                              type="text"
+                              placeholder="Краткое описание локации"
+                              required
+                            />
+                          </div>
+                          <div class="big-form__description">
+                            <p>
+                              Опишите локацию в нескольких словах: первый
+                              ледовый дворец города Когалым.
+                            </p>
+                          </div>
+                        </li>
+                        <li class="big-form__item">
+                          <div class="big-form__wrapper">
+                            <label>Точный адрес</label>
+                            <input
+                              name="location-address"
+                              type="text"
+                              placeholder="Индекс, город, улица, дом"
+                              required
+                            />
+                          </div>
+                          <div class="big-form__description">
+                            <p>Точный почтовый адрес локации (если он есть)</p>
+                          </div>
+                        </li>
+                        <li class="big-form__item">
+                          <div class="big-form__wrapper">
+                            <label>Код виджета Яндекс</label>
+                            <textarea
+                              placeholder="Код виджета вставлять сюда"
+                              name="vidget-code"
+                            ></textarea>
+                          </div>
+                          <div class="big-form__description">
+                            <p>
+                              Если у локации нет точного адреса, но требуется
+                              указать её расположение на карте, вставьте в это
+                              поле код виджета карт Яндекса.
+                            </p>
+                          </div>
+                        </li>
+
+                        <li class="big-form__item border-bottom">
+                          <div class="big-form__wrapper">
+                            <label>Тип локации *</label>
+
+                            <div class="custom-select">
+                              <select name="location-type">
+                                <option value="0">
+                                  Выбрать тип локации из списка
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <p class="big-form__description">
+                            Пешеходная для пешеходов, автомобильная для
+                            автотранспорта
+                          </p>
+                        </li>
+
+                        <li>
+                          <button class="big-form__btn-ticket save">
+                            Сохранить локацию
+                          </button>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <button
+                    class="big-form__btn-ticket big-form__btn-ticket-add"
+                    type="button"
+                    data-template="new-location"
+                    data-btn="add"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="15"
+                        height="0.7"
+                        transform="matrix(0 -1 0.999995 0.00305792 7 15)"
+                        fill="black"
+                      />
+                      <path
+                        d="M15.002 8L0.00195408 8L-0.000186465 7.3L14.9998 7.3L15.002 8Z"
+                        fill="black"
+                      />
+                    </svg>
+                    Добавить еще одну локацию
+                  </button>
                 </div>
 
                 <div class="big-form__buttons">
@@ -591,28 +466,99 @@
       </main>
       @include('partials/footer.html')
     </div>
-    <template id="command-item">
-      <li class="big-form__command command-dropzone" data-changeable-id="true">
-        <div class="big-form__wrapper">
-          <label>Название стороны</label>
-          <input name="nameCommand" placeholder="ввести название" type="text" />
-        </div>
-        <div class="custom-select">
-          <select name="colorCommand">
-            <option value="0">выбрать цвет</option>
-            <option value="1">цвет 1</option>
-            <option value="2">цвет 2</option>
-          </select>
-        </div>
-        <p>или</p>
-        <button class="big-form__command-btn-dropzone" type="button">
-          загрузить пиктограмму
-        </button>
-        <button
-          class="big-form__btn-delete-command"
-          type="button"
-          data-btn="delete"
-        >
+
+    <template id="new-location">
+      <li class="changeable-item" data-changeable-id="true">
+        <ul class="big-form__list">
+          <li>
+            <h3>Локация <span class="changeable-serial-number"></span></h3>
+          </li>
+          <li class="big-form__item">
+            <div class="big-form__wrapper">
+              <label>Название локации *</label>
+              <input
+                name="location-name"
+                type="text"
+                placeholder="Полное название локации"
+                required
+              />
+            </div>
+            <div class="big-form__description">
+              <p>
+                Например, гостиница Айсылу, конференц-зал или стадион им.
+                Суеуебаева, трибуны
+              </p>
+            </div>
+          </li>
+          <li class="big-form__item">
+            <div class="big-form__wrapper">
+              <label>Описание</label>
+              <input
+                name="location-description"
+                type="text"
+                placeholder="Краткое описание локации"
+                required
+              />
+            </div>
+            <div class="big-form__description">
+              <p>
+                Опишите локацию в нескольких словах: первый ледовый дворец
+                города Когалым.
+              </p>
+            </div>
+          </li>
+          <li class="big-form__item">
+            <div class="big-form__wrapper">
+              <label>Точный адрес</label>
+              <input
+                name="location-address"
+                type="text"
+                placeholder="Индекс, город, улица, дом"
+                required
+              />
+            </div>
+            <div class="big-form__description">
+              <p>Точный почтовый адрес локации (если он есть)</p>
+            </div>
+          </li>
+          <li class="big-form__item">
+            <div class="big-form__wrapper">
+              <label>Код виджета Яндекс</label>
+              <textarea
+                placeholder="Код виджета вставлять сюда"
+                name="vidget-code"
+              ></textarea>
+            </div>
+            <div class="big-form__description">
+              <p>
+                Если у локации нет точного адреса, но требуется указать её
+                расположение на карте, вставьте в это поле код виджета карт
+                Яндекса.
+              </p>
+            </div>
+          </li>
+
+          <li class="big-form__item border-bottom">
+            <div class="big-form__wrapper">
+              <label>Тип локации *</label>
+
+              <div class="custom-select">
+                <select name="location-type">
+                  <option value="0">Выбрать тип локации из списка</option>
+                </select>
+              </div>
+            </div>
+            <p class="big-form__description">
+              Пешеходная для пешеходов, автомобильная для автотранспорта
+            </p>
+          </li>
+
+          <li>
+            <button class="big-form__btn-ticket save">Сохранить локацию</button>
+          </li>
+        </ul>
+
+        <button class="big-form__btn-delete" type="button" data-btn="delete">
           <svg
             width="13"
             height="12"

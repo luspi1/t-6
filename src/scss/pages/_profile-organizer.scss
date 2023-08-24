@@ -1,19 +1,5 @@
 .profile-organizer {
   .event {
-    margin-bottom: 70px;
-
-    h1 {
-      font-size: 23px;
-      font-weight: 600;
-      margin-right: 10px;
-    }
-
-    &__top {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 24px;
-    }
-
     .big-form {
       &__item {
         &.column {
@@ -22,7 +8,7 @@
       }
 
       &__wrapper {
-        > b {
+        >b {
           font-size: 13px;
           font-weight: 600;
           line-height: normal;
@@ -136,7 +122,9 @@
           }
 
           .big-form__dropzone-left {
-            svg, p {
+
+            svg,
+            p {
               display: none;
             }
           }
@@ -153,6 +141,7 @@
             left: 61px;
             top: 15px;
           }
+
           .dz-date {
             color: #91969A;
             font-size: 11px;
@@ -160,6 +149,7 @@
             line-height: normal;
             order: 2;
           }
+
           .dz-details {
             display: flex !important;
             flex-direction: column;
@@ -193,6 +183,7 @@
 
           .dz-filename {
             order: 1;
+
             span {
               display: block;
               width: 150px;
@@ -229,7 +220,7 @@
         justify-content: center;
         text-align: center;
 
-        > svg {
+        >svg {
           margin-bottom: 5px;
         }
       }
