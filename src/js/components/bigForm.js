@@ -2,7 +2,7 @@ import {
   limitationChangeableElements,
   updateChangeableListId,
 } from '../_functions';
-import { initSelects } from './customSelect';
+//import { initSelects } from './customSelect';
 //import { initDrop } from './dropzone';
 
 //отображение новой площадки на create-event
@@ -206,7 +206,3 @@ if (secondInputPass) {
     }
   });
 }
-
-
-
-
