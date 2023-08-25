@@ -3,16 +3,15 @@ button {
     cursor: pointer;
     background: none;
     margin: 0;
-    padding: 0;
     @include montserrat-semibold;
     font-size: 13px;
     line-height: 22px;
+    padding: 0 15px;
 }
 
 .blue-btn {
     width: max-content;
     height: 35px;
-    padding: 0 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,9 +25,7 @@ button {
     }
 }
 
-
 .white-btn {
-    padding: 0 15px;
     color: $blue;
 }
 
@@ -40,11 +37,46 @@ button {
     z-index: 1000;
 }
 
-.btn-cancel {
-    margin-left: auto;
+.big-form__item-save-button {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: max-content;
     padding: 0 15px;
     border-radius: 3px;
-    border: 1px solid #EF3B4C;
+    border: 1px solid #868585;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    line-height: 16px;
+
+    &.add {
+        margin: 20px 0 30px;
+
+        svg {
+            margin-right: 5px;
+        }
+    }
+}
+
+.big-form__item-delete-button {
+    position: absolute;
+    padding: 15px;
+    top: 0;
+    right: 0;
+}
+
+.big-form__next-button {
+    margin: 0 12px;
+    border-radius: 3px;
+    border: 1px solid $blue;
+    color: $blue;
     background: #FFF;
+}
+
+.big-form__cancel-button {
+    margin-left: auto;
+    border-radius: 3px;
+    border: 1px solid #EF3B4C;
     color: #EF3B4C;
 }
