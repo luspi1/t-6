@@ -155,7 +155,6 @@ h1 {
 
 .date-custom-container {
   z-index: 900;
-  //position: absolute;
   left: 0;
   top: 0;
 }
@@ -309,8 +308,6 @@ h1 {
   }
 }
 
-////////
-
 .big-form__star {
   border-bottom: 1px solid #E3DDDD;
   margin-bottom: 17px;
@@ -322,6 +319,18 @@ h1 {
   border-bottom: 1px solid #E3DDDD;
 }
 
-.grey-border-bottom {
+._grey-border-bottom {
   border-bottom: 1px solid #E3DDDD;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.schedule {
+  .big-form .custom-select,
+  .big-form .custom-select._time,
+  .big-form__date-wrapper {
+    width: 100%;
+  }
 }

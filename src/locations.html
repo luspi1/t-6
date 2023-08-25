@@ -165,7 +165,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="main-menu__item border-bottom main-menu__item-min">
+              <li class="main-menu__item _border-bottom main-menu__item-min">
                 <span>
                   <svg
                     width="19"
@@ -201,7 +201,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="main-menu__item border-bottom">
+              <li class="main-menu__item _border-bottom">
                 <a href="#">
                   <svg
                     width="20"
@@ -266,7 +266,7 @@
                     <a href="#">Локации</a>
                   </li>
                   <li class="navigation-row__item">
-                    <a href="#">Расписание</a>
+                    <a href="schedule.html">Расписание</a>
                   </li>
                   <li class="navigation-row__item">
                     <a href="#">Списки</a>
@@ -302,7 +302,7 @@
                         ВНИМАНИЕ! Для того, чтобы указывать доступные локации в
                         билете, их нужно создать в этом разделе!
                       </p>
-                      <button aria-label="Закрыть предупреждение">
+                      <button aria-label="Закрыть предупреждение" type="button">
                         <svg
                           width="13"
                           height="12"
@@ -396,7 +396,7 @@
                           </div>
                         </li>
 
-                        <li class="big-form__item border-bottom">
+                        <li class="big-form__item _border-bottom">
                           <div class="big-form__wrapper">
                             <label>Тип локации *</label>
 
@@ -415,7 +415,10 @@
                         </li>
 
                         <li>
-                          <button class="big-form__btn-ticket save">
+                          <button
+                            class="big-form__item-save-button"
+                            type="button"
+                          >
                             Сохранить локацию
                           </button>
                         </li>
@@ -423,7 +426,7 @@
                     </li>
                   </ul>
                   <button
-                    class="big-form__btn-ticket big-form__btn-ticket-add"
+                    class="big-form__item-save-button add"
                     type="button"
                     data-template="new-location"
                     data-btn="add"
@@ -451,13 +454,15 @@
                 </div>
 
                 <div class="big-form__buttons">
-                  <button class="blue-btn big-form__btn-save" type="submit">
+                  <button class="blue-btn" type="submit">
                     Сохранить и закрыть
                   </button>
-                  <button class="white-btn big-form__btn-next" type="submit">
+                  <button class="big-form__next-button" type="submit">
                     Применить и продолжить
                   </button>
-                  <button class="btn-cancel">Отменить изменения</button>
+                  <button class="big-form__cancel-button" type="button">
+                    Отменить изменения
+                  </button>
                 </div>
               </form>
             </section>
@@ -538,7 +543,7 @@
             </div>
           </li>
 
-          <li class="big-form__item border-bottom">
+          <li class="big-form__item _border-bottom">
             <div class="big-form__wrapper">
               <label>Тип локации *</label>
 
@@ -558,7 +563,11 @@
           </li>
         </ul>
 
-        <button class="big-form__btn-delete" type="button" data-btn="delete">
+        <button
+          class="big-form__item-delete-button"
+          type="button"
+          data-btn="delete"
+        >
           <svg
             width="13"
             height="12"

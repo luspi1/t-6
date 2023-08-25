@@ -22,7 +22,7 @@
   &__item {
     display: flex;
 
-    &.border-bottom {
+    &._border-bottom {
       padding-bottom: 30px;
       border-bottom: 1px solid #E3DDDD;
     }
@@ -176,17 +176,6 @@
     border-top: 1px solid #E3DDDD;
   }
 
-  &__btn-save {
-    margin-right: 12px;
-  }
-
-  &__btn-next {
-    margin-right: 12px;
-    border-radius: 3px;
-    border: 1px solid $blue;
-    color: $blue;
-    background: #FFF;
-  }
 
   input[type="radio"] {
     accent-color: black;

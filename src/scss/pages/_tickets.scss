@@ -58,11 +58,6 @@
   }
 
   &__item {
-
-    &.mb0 {
-      margin-bottom: 0;
-    }
-
     &.column {
       flex-direction: column;
     }
@@ -167,41 +162,5 @@
     &:not(:last-child) {
       margin-right: 15px;
     }
-  }
-
-  &__btn-ticket {
-    display: flex;
-    align-items: center;
-    height: 35px;
-    width: max-content;
-    padding: 0 15px;
-    border-radius: 3px;
-    border: 1px solid #868585;
-    color: black;
-    font-weight: 400;
-    font-size: 13px;
-    text-align: center;
-  }
-
-  &__btn-ticket-save {
-    background: #F0F2F3;
-  }
-
-  &__btn-ticket-add {
-    margin: 20px 0 30px;
-    background: #FFF;
-    pointer-events: none;
-
-    svg {
-      margin-right: 5px;
-    }
-  }
-
-  &__btn-delete {
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    right: 15px;
-    top: 15px;
   }
 }
