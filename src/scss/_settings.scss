@@ -325,3 +325,16 @@ h1 {
 .grey-border-bottom {
   border-bottom: 1px solid #E3DDDD;
 }
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.schedule {
+
+  .big-form .custom-select,
+  .big-form .custom-select._time,
+  .big-form__date-wrapper {
+    width: 100%;
+  }
+}
