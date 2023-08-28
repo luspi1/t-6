@@ -25,8 +25,6 @@ if (contentTablesTogglerButtons) {
   contentTablesTogglerButtons.forEach((item) => {
     tabsToggler(contentTablesTogglerButtons);
 
-    console.log(item.querySelector('span'));
-
     item.querySelector('span').innerHTML = '';
 
     item.addEventListener('click', (e) => {
