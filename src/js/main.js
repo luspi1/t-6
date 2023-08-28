@@ -1,1 +1,2 @@
-import './_components'
+import './_components';
+import './_functions';
