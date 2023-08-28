@@ -18,8 +18,10 @@ body {
   background: #F3F5F6;
 }
 
-main {
+.main,
+.main-container {
   min-height: calc(100vh - 198px);
+
 }
 
 ul,
@@ -294,6 +296,10 @@ h1 {
   .event {
     margin-bottom: 70px;
 
+    form {
+      flex: 1;
+    }
+
     h1 {
       font-size: 23px;
       font-weight: 600;
@@ -315,7 +321,7 @@ h1 {
 }
 
 .big-form__title-description {
-  padding-bottom: 25px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #E3DDDD;
 }
 
@@ -328,9 +334,23 @@ h1 {
 }
 
 .schedule {
+
   .big-form .custom-select,
   .big-form .custom-select._time,
   .big-form__date-wrapper {
     width: 100%;
+  }
+}
+
+// растягивание формы на странице Списки до конца блока
+
+.lists .event {
+  display: flex;
+  flex-direction: column;
+
+  min-height: calc(100% - 70px);
+
+  .big-form {
+    flex: 1;
   }
 }
