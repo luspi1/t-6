@@ -55,16 +55,18 @@ if (createEventButton) {
   });
 }
 
-window.addEventListener('click', (e) => {
-  const target = e.target;
-  if (
-    eventModal &&
-    !target.closest('.events__modal') &&
-    !target.closest('.events__link._create')
-  ) {
-    eventModal.classList.remove('_active');
-  }
-});
+if (window.location.pathname == '/' || window.location.href.includes('index')) {
+  window.addEventListener('click', (e) => {
+    const target = e.target;
+    if (
+      eventModal &&
+      !target.closest('.events__modal') &&
+      !target.closest('.events__link._create')
+    ) {
+      eventModal.classList.remove('_active');
+    }
+  });
+}
 
 //Форма регистрации на главной
 

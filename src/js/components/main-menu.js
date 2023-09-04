@@ -44,34 +44,36 @@ if (contentTablesTogglerButtons) {
 
 //Страница СПИСКИ: подсчет количества заплативших участников в названиях кнопок-переключателей
 
-const visitiorsCountTitle = document.querySelector('.lists-visitiors-count');
+if (window.location.href.includes('visitors-lists')) {
+  const visitiorsCountTitle = document.querySelector('.lists-visitiors-count');
 
-const visitorsTable = document.querySelector('.visitors-table');
-const visitors = visitorsTable.querySelectorAll('tr.visitor');
-let paidVisitors = 0;
+  const visitorsTable = document.querySelector('.visitors-table');
+  const visitors = visitorsTable.querySelectorAll('tr.visitor');
+  let paidVisitors = 0;
 
-visitors.forEach((item) => {
-  item.querySelector('select.user-payment').selectedOptions[0].value == 1
-    ? (paidVisitors += 1)
-    : null;
-});
-visitiorsCountTitle.innerHTML = `(${paidVisitors}/${visitors.length})`;
+  visitors.forEach((item) => {
+    item.querySelector('select.user-payment').selectedOptions[0].value == 1
+      ? (paidVisitors += 1)
+      : null;
+  });
+  visitiorsCountTitle.innerHTML = `(${paidVisitors}/${visitors.length})`;
 
-const groupsCountTitle = document.querySelector('.lists-groups-count');
+  const groupsCountTitle = document.querySelector('.lists-groups-count');
 
-const groupsTable = document.querySelector('.groups-table');
-const groups = groupsTable.querySelectorAll('tr.group');
-let paidGroups = 0;
+  const groupsTable = document.querySelector('.groups-table');
+  const groups = groupsTable.querySelectorAll('tr.group');
+  let paidGroups = 0;
 
-groups.forEach((item) => {
-  item.querySelector('select.group-payment').selectedOptions[0].value == 1
-    ? (paidVisitors += 1)
-    : null;
-});
-groupsCountTitle.innerHTML = `(${paidGroups}/${groups.length})`;
+  groups.forEach((item) => {
+    item.querySelector('select.group-payment').selectedOptions[0].value == 1
+      ? (paidVisitors += 1)
+      : null;
+  });
+  groupsCountTitle.innerHTML = `(${paidGroups}/${groups.length})`;
 
-const transportCountTitle = document.querySelector('.lists-transport-count');
-const transportTable = document.querySelector('.transport-table');
-const transports = transportTable.querySelectorAll('tr.transport');
+  const transportCountTitle = document.querySelector('.lists-transport-count');
+  const transportTable = document.querySelector('.transport-table');
+  const transports = transportTable.querySelectorAll('tr.transport');
 
-transportCountTitle.innerHTML = `(${transports.length})`;
+  transportCountTitle.innerHTML = `(${transports.length})`;
+}
