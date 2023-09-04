@@ -52,7 +52,7 @@ if (window.location.href.includes('visitors-lists')) {
   let paidVisitors = 0;
 
   visitors.forEach((item) => {
-    item.querySelector('select.user-payment').selectedOptions[0].value == 1
+    item.querySelector('select.user-payment').selectedOptions[0].value === 1
       ? (paidVisitors += 1)
       : null;
   });
@@ -65,7 +65,7 @@ if (window.location.href.includes('visitors-lists')) {
   let paidGroups = 0;
 
   groups.forEach((item) => {
-    item.querySelector('select.group-payment').selectedOptions[0].value == 1
+    item.querySelector('select.group-payment').selectedOptions[0].value === 1
       ? (paidVisitors += 1)
       : null;
   });
