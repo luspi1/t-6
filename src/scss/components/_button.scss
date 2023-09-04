@@ -7,6 +7,7 @@ button {
     font-size: 13px;
     line-height: 22px;
     padding: 0 15px;
+    font-family: inherit;
 }
 
 .blue-btn {
@@ -16,7 +17,7 @@ button {
     align-items: center;
     justify-content: center;
     border-radius: 3px;
-    background: $blue;
+    background: #113770;
     color: #ffffff;
 
     &._disabled {
@@ -35,6 +36,14 @@ button {
     right: 0px;
     top: 0px;
     z-index: 1000;
+
+    @media (max-width: 730px) {
+        top: 10px;
+
+        svg path {
+            fill: #000;
+        }
+    }
 }
 
 .big-form__item-save-button {
@@ -44,14 +53,19 @@ button {
     width: max-content;
     padding: 0 15px;
     border-radius: 3px;
-    border: 1px solid #868585;
-    font-weight: 400;
-    font-size: 13px;
+    border: 1px solid #113770;
+
     text-align: center;
-    line-height: 16px;
+
+    color: #113770;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
 
     &.add {
-        margin: 20px 0 30px;
+        margin: 10px 0 10px;
+        border: none;
+        padding: 0;
 
         svg {
             margin-right: 5px;
@@ -66,8 +80,17 @@ button {
     right: 0;
 }
 
+.big-form__buttons {
+    button {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        padding: 0 18px;
+    }
+}
+
 .big-form__next-button {
-    margin: 0 12px;
+    margin: 0 17px;
     border-radius: 3px;
     border: 1px solid $blue;
     color: $blue;

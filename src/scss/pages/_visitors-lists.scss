@@ -1,10 +1,15 @@
 .visitors-lists {
+    .big-form__title-description {
+        margin: 0;
+    }
+
     .table-togglers-wrapper {
         display: flex;
-        gap: 24px;
+        gap: 27px;
+        font-size: 17px;
 
         .table-content-toggler {
-            padding: 24px 0;
+            padding: 15px 0 18px 0;
             margin: 0;
             color: #113770;
             font-size: 17px;
@@ -41,7 +46,7 @@
             gap: 20px;
 
             .choices__inner {
-                padding-left: 10px;
+                padding: 0px 4px;
             }
 
             .search-form {
@@ -55,7 +60,12 @@
             }
 
             button {
+                padding: 0 12px;
                 margin: 0;
+                font-family: inherit;
+                color: #113770;
+                font-size: 14px;
+                font-weight: 600;
             }
         }
 
@@ -68,6 +78,8 @@
                 cursor: pointer;
                 width: 100%;
                 padding: 0 10px;
+                border-radius: 5px;
+                border: 1px solid #113770;
 
                 &:hover {
                     border: 1px solid #113770;
@@ -87,8 +99,8 @@
         table {
             font-size: 13px;
             border: 1px solid #C2CAC9;
+            line-height: normal;
             width: 100%;
-
             border-radius: 5px;
             border-spacing: 0;
 
@@ -100,24 +112,23 @@
                 }
             }
 
+
             thead,
             tfoot {
                 background: #EDF2F6;
             }
 
             th {
-                padding: 10px;
+                padding: 12px;
                 text-align: left;
                 font-weight: 500;
+
+                padding-left: 12px;
             }
 
-            tr {
-                padding: 10px;
-            }
 
             td {
-                max-width: 200px;
-                padding: 10px;
+                padding: 5px 10px;
                 border-top: 1px solid #C2CAC9;
             }
 
@@ -131,15 +142,15 @@
 
                 .table-pagination {
                     display: flex;
-                    gap: 2px;
+                    gap: 5px;
 
                     li {
                         cursor: pointer;
                         text-align: center;
-                        min-width: 26px;
-                        max-height: 26px;
+                        min-width: 24px;
                         border: 1px solid transparent;
                         border-radius: 3px;
+                        padding: 3px 8px;
 
                         &:hover {
                             border: 1px solid #868585;
@@ -160,7 +171,7 @@
                     background: #FFFFFF;
                     border: 1px solid #E3DDDD;
                     border-radius: 3px;
-                    padding: 6px 8px;
+                    padding: 6px 7px;
                     display: flex;
                     align-items: center;
                     font-weight: 400;
@@ -171,5 +182,9 @@
                 }
             }
         }
+    }
+
+    .choices__list--single {
+        padding: 4px;
     }
 }

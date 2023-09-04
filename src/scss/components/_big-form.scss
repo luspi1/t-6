@@ -1,15 +1,20 @@
 .big-form {
-  padding: 27px 20px 40px;
+  padding: 13px 20px 40px;
   border-radius: 10px;
   border: 1px solid #E3DDDD;
   background: #FFF;
+
+  h2 {
+    font-size: 20px;
+    line-height: normal;
+  }
 
   >p {
     font-size: 13px;
   }
 
   &__star {
-    margin-bottom: 22px;
+    margin-bottom: 0px;
     color: #91969A;
     font-size: 13px;
     line-height: normal;
@@ -19,33 +24,39 @@
     margin-bottom: 40px;
   }
 
+  &__title-description {
+    border-bottom: 1px solid #E3DDDD;
+    margin-bottom: 25px;
+  }
+
   &__item {
     display: flex;
 
     &._border-bottom {
-      padding-bottom: 30px;
+      padding-bottom: 15px;
       border-bottom: 1px solid #E3DDDD;
     }
 
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 17px;
     }
 
   }
 
   &__wrapper {
-    width: 53%;
-    margin-right: 18px;
+    margin-right: 20px;
 
     label {
       display: block;
       margin-bottom: 7px;
-      font-size: 13px;
+
       line-height: normal;
+      font-size: 14px;
+      font-weight: 400;
     }
 
     input {
-      width: 100%;
+      width: 416px;
       height: 35px;
       padding-left: 10px;
       font-size: 13px;
@@ -73,7 +84,10 @@
 
       &::placeholder {
         color: #91969A;
-        font-size: 13px;
+
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
         line-height: normal;
       }
     }
@@ -105,10 +119,14 @@
   }
 
   &__description {
-    width: 45%;
+    max-width: 320px;
     margin-top: 23px;
-    font-size: 11px;
+
     line-height: normal;
+    color: #2D3231;
+    font-size: 12px;
+    font-weight: 400;
+
 
     a {
       color: $blue;
@@ -182,4 +200,10 @@
     width: 15px;
     height: 15px;
   }
+}
+
+.form-footer {
+  width: 100%;
+  border-top: 1px solid #C2CAC9;
+  padding-top: 20px;
 }

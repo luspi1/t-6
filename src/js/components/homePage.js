@@ -55,16 +55,18 @@ if (createEventButton) {
   });
 }
 
-window.addEventListener('click', (e) => {
-  const target = e.target;
-  if (
-    eventModal &&
-    !target.closest('.events__modal') &&
-    !target.closest('.events__link._create')
-  ) {
-    eventModal.classList.remove('_active');
-  }
-});
+if (document.querySelector('.home-page')) {
+  window.addEventListener('click', (e) => {
+    const target = e.target;
+    if (
+      eventModal &&
+      !target.closest('.events__modal') &&
+      !target.closest('.events__link._create')
+    ) {
+      eventModal.classList.remove('_active');
+    }
+  });
+}
 
 //Форма регистрации на главной
 
@@ -76,9 +78,6 @@ const changeHomeRegContent = (state = 1, content) => {
     ?.cloneNode(true);
   content.innerHTML = '';
   content.append(currentState);
-
-  console.log(currentState);
-
   return currentState;
 };
 
