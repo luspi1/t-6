@@ -55,7 +55,7 @@ if (createEventButton) {
   });
 }
 
-if (window.location.pathname == '/' || window.location.href.includes('index')) {
+if (document.querySelector('.home-page')) {
   window.addEventListener('click', (e) => {
     const target = e.target;
     if (
@@ -78,9 +78,6 @@ const changeHomeRegContent = (state = 1, content) => {
     ?.cloneNode(true);
   content.innerHTML = '';
   content.append(currentState);
-
-  console.log(currentState);
-
   return currentState;
 };
 
