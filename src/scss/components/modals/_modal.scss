@@ -4,7 +4,8 @@
     overflow-x: hidden;
     left: 50%;
     top: 50%;
-    width: 650px;
+    width: 550px;
+
     transform: translate(-50%, -50%);
     transition: all .2s;
     opacity: 0;
@@ -26,8 +27,11 @@
 
 
     .styled-form {
-        width: 602px;
-        padding: 44px 35px 35px 30px;
+        width: 502px;
+        max-width: 485px;
+        padding: 25px 30px;
+
+        //padding: 44px 35px 35px 30px;
         border: 1px solid #93B5C5;
         border-radius: 5px;
         background-color: #fff;
@@ -51,7 +55,7 @@
     }
 
     a {
-        @include montserrat-semibold;
+        // @include montserrat-semibold;
         font-size: 13px;
         line-height: 22px;
         color: $blue;
@@ -60,14 +64,23 @@
 
     .reset-password-form {
         position: relative;
-        top: -30px;
+        //top: -30px;
+        top: -10px;
+        padding-top: 30px;
+        //border: 3px solid red;
         border-radius: 0 0 5px 5px;
 
         p:first-child {
-            margin-bottom: 25px;
-            font-size: 13px;
-            line-height: 18px;
+            margin-bottom: 20px;
+
+
             position: relative;
+
+            font-size: 14px;
+
+            font-weight: 400;
+            line-height: 18px;
+
 
             &::after {
                 position: absolute;
@@ -85,20 +98,36 @@
     }
 
     [type="submit"] {
-        margin-top: 20px;
+        margin-top: 15px;
+        padding: 13px 21px;
+
+        font-size: 14px;
+
+        font-weight: 600;
+        line-height: 22px;
     }
 
     label {
-        margin-bottom: 8px;
-        @include montserrat-regular;
-        font-size: 13px;
+        margin-bottom: 5px;
+        // @include montserrat-regular;
+
+        //display: inline;
+        //border: 3px solid red;
+        width: max-content;
+
+        font-size: 14px;
+
+        font-weight: 400;
+        line-height: normal;
 
         &.required {
             position: relative;
 
             &::after {
                 position: absolute;
-                content: " *";
+                content: "*";
+                right: -12px;
+                top: 0;
             }
         }
     }
@@ -127,17 +156,21 @@
 
 .user-modal {
     h4 {
-        @include montserrat-semibold;
-        font-size: 23px;
-        line-height: 28px;
+        // @include montserrat-semibold;
+        // font-size: 23px;
+        // line-height: 28px;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: normal;
         position: relative;
+        margin-bottom: 14px;
     }
 
     .input-container {
         display: flex;
         flex-direction: column;
         position: relative;
-        margin: 20px 0;
+        margin-bottom: 20px;
 
         button {
             top: 50%;
@@ -155,31 +188,37 @@
         border-radius: 3px;
 
         &::placeholder {
-            font-size: 13px;
-            line-height: 16px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: normal;
         }
     }
 
     .block-grouping {
         display: flex;
         justify-content: space-between;
-        gap: 10px;
+        gap: 9px;
+
+        margin-bottom: 17px;
 
         .block-grouping-item {
-            min-width: calc((100% - 10px) / 2);
+            min-width: 208px;
+            max-width: calc((100% - 9px) / 2);
 
             .big-form__date-wrapper {
                 width: 100%;
+                margin: 0;
             }
         }
     }
 
-
-
     .text {
-        font-size: 11px;
-        line-height: 16px;
         margin-bottom: 20px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+
+        //border: 3px solid red;
     }
 
     .checkbox-container {
@@ -188,13 +227,30 @@
         gap: 10px;
 
         .chechbox-label {
+            //border: 3px solid green;
+            font-size: 13px;
+            font-weight: 400;
             line-height: 18px;
         }
 
         a {
-            line-height: 0;
-            color: $blue;
-            font-weight: 400;
+            color: #113770;
+            font-size: 13px;
+
+            font-weight: 600;
+            line-height: 18px;
         }
+    }
+
+    .white-btn {
+        // border: 3px solid red;
+        padding: 0;
+
+        color: #113770;
+
+        font-size: 14px;
+
+        font-weight: 600;
+        line-height: 22px;
     }
 }

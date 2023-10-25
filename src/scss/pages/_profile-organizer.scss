@@ -1,15 +1,37 @@
 .profile-organizer {
   .event {
     .big-form {
+      input {
+        width: 517px;
+      }
+
+      .short-input {
+        width: 254px;
+        margin-left: 9px;
+      }
+
       &__item {
         &.column {
           flex-direction: column;
         }
       }
 
+      .area-block {
+        margin-top: 20px;
+
+        label {
+          margin-bottom: 2px;
+        }
+
+        textarea {
+          width: 517px;
+        }
+      }
+
       &__wrapper {
         >b {
-          font-size: 13px;
+          margin-top: 5px;
+          font-size: 14px;
           font-weight: 600;
           line-height: normal;
         }

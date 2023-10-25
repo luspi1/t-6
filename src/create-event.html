@@ -145,7 +145,7 @@
                         </div>
                         <div class="custom-select _time">
                           <select name="timeStart">
-                            <option value>чч.мм</option>
+                            <option value="" selected>чч.мм</option>
                             <option value="1">12:00</option>
                             <option value="2">12:30</option>
                             <option value="2">13:00</option>
@@ -187,7 +187,7 @@
                         </div>
                         <div class="custom-select _time">
                           <select name="timeEnd">
-                            <option value>чч.мм</option>
+                            <option value="" selected>чч.мм</option>
                             <option value="1">12:00</option>
                             <option value="2">12:30</option>
                             <option value="2">13:00</option>
@@ -211,7 +211,7 @@
                       Краткое описание или слоган события.
                     </p>
                   </li>
-                  <li class="big-form__item">
+                  <li class="big-form__item event-description">
                     <div class="big-form__wrapper">
                       <label>Подробное описание *</label>
                       <textarea
@@ -225,7 +225,7 @@
                       абзацах. Не сокращайте слова: килобайтов хватит на всех!
                     </p>
                   </li>
-                  <li class="big-form__item">
+                  <li class="big-form__item participation">
                     <div class="big-form__wrapper">
                       <label>Условия участия *</label>
                       <textarea
@@ -278,6 +278,7 @@
                         </div>
                         <div class="big-form__input-min">
                           <input
+                            class="short-input"
                             name="place"
                             type="text"
                             placeholder="начните вводить название"
@@ -292,7 +293,7 @@
                     </p>
                   </li>
                 </ul>
-                <p>
+                <p class="creation-platform">
                   Если площадки нет в списке, Вы можете
                   <button class="big-form__btn-new-place" type="button">
                     создать и сохранить новую площадку

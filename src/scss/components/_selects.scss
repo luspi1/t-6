@@ -10,11 +10,47 @@
     border-radius: 3px;
     background: #FFF;
     color: #292F35;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+
   }
 }
 
-.choices__list--dropdown, .choices__list[aria-expanded] {
+.choices.is-open {
+  .choices__list--dropdown {
+    border-radius: 3px;
+    border: 1px solid #113770;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .choices__list {
+    max-height: 150px;
+    max-width: 70px;
+
+    //padding: -5px 0;
+    scroll-padding-top: 20px;
+
+  }
+
+  .choices__list ::-webkit-scrollbar {
+    width: 7px;
+    height: 50px;
+  }
+
+  .choices__list ::-webkit-scrollbar-track {
+    margin-top: 5px;
+  }
+
+  .choices__list ::-webkit-scrollbar-thumb {
+    background: #C2CAC9;
+    border-radius: 5px;
+  }
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
   margin-top: 5px;
   border-color: #868585;
   border-radius: 3px;
@@ -22,23 +58,33 @@
 }
 
 .choices__list--single {
-  padding: 1px 16px 4px 4px;
+  // padding: 1px 16px 4px 4px;
+  padding: 4px 16px 4px 4px;
 }
 
-.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
   font-size: 13px;
   color: #292F35;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
   background-color: #EBEAEA;
 }
 
 @media (min-width: 640px) {
-  .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+
+  .choices__list--dropdown .choices__item--selectable,
+  .choices__list[aria-expanded] .choices__item--selectable {
     padding-right: 10px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    margin-top: 2px;
   }
 }
 

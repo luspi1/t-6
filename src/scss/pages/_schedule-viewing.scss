@@ -1,0 +1,79 @@
+.schedule-viewing-page {
+    .schedule-viewing-button {
+        padding: 8px 12px;
+        display: inline-block;
+        max-height: 35px;
+        border-radius: 3px;
+        border: 1px solid #113770;
+        margin: 20px 0;
+        color: #113770;
+        text-align: center;
+        font-family: 'OpenSans', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 22px;
+
+        svg {
+            margin-right: 6px;
+        }
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .download-button {
+        padding: 0 8px;
+        width: 165px;
+        height: 26px;
+        display: inline-block;
+        border-radius: 3px;
+        border: 1px solid #113770;
+        font-family: 'OpenSans', sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .schedule-container {
+        padding: 15px 10px;
+        background: #F4F7FA;
+        border: 1px dashed #98A5A3;
+        border-radius: 5px;
+
+        .schedule-item {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'OpenSans', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: normal;
+
+            &:not(:last-child) {
+                margin-bottom: 14px;
+            }
+        }
+
+        .schedule-item__index {
+            width: 2%;
+        }
+
+        .schedule-item__title {
+            width: 49%;
+        }
+
+        .schedule-item__location {
+            width: 19%;
+        }
+
+        .schedule-item__time {
+            width: 30%;
+
+            &-hours {
+                font-weight: 700;
+            }
+        }
+    }
+}

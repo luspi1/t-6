@@ -4,6 +4,7 @@
   border: 1px solid #E3DDDD;
   background: #FFF;
 
+
   h2 {
     font-size: 20px;
     line-height: normal;
@@ -26,21 +27,19 @@
 
   &__title-description {
     border-bottom: 1px solid #E3DDDD;
-    margin-bottom: 25px;
   }
 
   &__item {
     display: flex;
 
     &._border-bottom {
-      padding-bottom: 15px;
+      padding-bottom: 25px;
       border-bottom: 1px solid #E3DDDD;
     }
 
     &:not(:last-child) {
       margin-bottom: 17px;
     }
-
   }
 
   &__wrapper {
@@ -119,7 +118,7 @@
   }
 
   &__description {
-    max-width: 320px;
+    max-width: 420px;
     margin-top: 23px;
 
     line-height: normal;
@@ -190,7 +189,7 @@
 
   &__buttons {
     display: flex;
-    padding-top: 30px;
+    padding-top: 40px;
     border-top: 1px solid #E3DDDD;
   }
 

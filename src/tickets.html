@@ -65,7 +65,7 @@
                       data-show-list
                     />
                     <label for="openRegVisitor"
-                      >Включить регистрацию посетителей</label
+                      >Включить билетную и пропускную систему</label
                     >
                   </div>
                   <ul data-list="changeable" data-changeable-id="true">
@@ -75,11 +75,21 @@
                         <li class="big-form__item">
                           <div class="big-form__wrapper">
                             <label>Название билета *</label>
-                            <input name="ticketName" type="text" required />
+                            <input
+                              name="ticketName"
+                              type="text"
+                              placeholder="Стандартный билет"
+                              required
+                            />
                           </div>
                           <div class="big-form__wrapper quantity">
                             <label>Билетов, не более</label>
-                            <input name="ticketQuantity" type="number" />
+                            <input
+                              class="short-input"
+                              name="ticketQuantity"
+                              type="number"
+                              placeholder="2 000"
+                            />
                           </div>
                         </li>
                         <li class="big-form__item">
@@ -89,6 +99,7 @@
                               name="paidTicket"
                               id="paidTicket"
                               data-paidTicket
+                              checked
                             />
                             <label for="paidTicket">Платный билет</label>
                           </div>
@@ -97,6 +108,7 @@
                               type="checkbox"
                               name="fastReg"
                               id="fastReg"
+                              checked
                             />
                             <label for="fastReg">Быстрая регистрация</label>
                           </div>
@@ -105,6 +117,7 @@
                               type="checkbox"
                               name="personalPurchase"
                               id="personalPurchase"
+                              checked
                             />
                             <label for="personalPurchase"
                               >Самостоятельная покупка</label
@@ -117,6 +130,7 @@
                               id="ticketRefund"
                               data-ticketRefund
                               disabled
+                              checked
                             />
                             <label for="ticketRefund"
                               >Возможен возврат билета</label
@@ -126,7 +140,13 @@
                         <li class="big-form__item _border-bottom">
                           <div class="big-form__wrapper quantity">
                             <label>Стоимость билета *</label>
-                            <input name="ticketPrice" type="number" required />
+                            <input
+                              class="short-input"
+                              name="ticketPrice"
+                              type="number"
+                              placeholder="2 000"
+                              required
+                            />
                           </div>
                           <p class="big-form__description">рублей РФ</p>
                         </li>
@@ -148,6 +168,7 @@
                                 type="checkbox"
                                 name="bigField"
                                 id="bigField"
+                                checked
                               />
                               <label for="bigField">Большое поле</label>
                             </li>
@@ -156,11 +177,17 @@
                                 type="checkbox"
                                 name="tribunes"
                                 id="tribunes"
+                                checked
                               />
                               <label for="tribunes">Трибуны</label>
                             </li>
                             <li class="custom-checkbox">
-                              <input type="checkbox" name="cafe" id="cafe" />
+                              <input
+                                type="checkbox"
+                                name="cafe"
+                                id="cafe"
+                                checked
+                              />
                               <label for="cafe">Кафе</label>
                             </li>
                             <li class="custom-checkbox">
@@ -285,6 +312,7 @@
                                 <input
                                   type="number"
                                   name="ticketLimitedInput"
+                                  placeholder="5"
                                 />
                               </li>
                               <li class="big-form__entry-item">
@@ -335,19 +363,19 @@
                           </div>
                         </li>
                         <li class="big-form__item">
-                          <div class="big-form__wrapper">
-                            <label>Описание билета *</label>
+                          <div class="big-form__wrapper area">
+                            <label class="area-label">Описание билета *</label>
                             <textarea
                               placeholder="Подробное описание билета"
                               name="ticketDescription"
                             ></textarea>
                           </div>
                           <div class="big-form__description">
-                            <p>
+                            <p class="area-description">
                               Лучше всего написать, что конкретно получает
                               владелец билета в рамках события.
                             </p>
-                            <p>
+                            <p class="area-description">
                               Это описание — публичное, то есть — видно вообще
                               всем.
                             </p>
@@ -470,6 +498,7 @@
                     </li>
                   </ul>
                   <button
+                    
                     class="big-form__item-save-button add"
                     type="button"
                     data-template="new-ticket"

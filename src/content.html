@@ -59,7 +59,7 @@
                   <ul>
                     <li class="dropzone-item _grey-border-bottom">
                       <h3>Логотип *</h3>
-                      <p>соотношение сторон 1:1 или 1:2, JPEG, PNG, SVG</p>
+                      <p class="dropzone-aspectratio">соотношение сторон 1:1 или 1:2, JPEG, PNG, SVG</p>
 
                       <div class="dropzone-wrapper">
                         <div class="dropzone-left">
@@ -114,7 +114,7 @@
 
                     <li class="dropzone-item _grey-border-bottom">
                       <h3>Упрощенный логотип</h3>
-                      <p>соотношение сторон 1:1 или 1:2, JPEG, PNG, SVG</p>
+                      <p class="dropzone-aspectratio">соотношение сторон 1:1 или 1:2, JPEG, PNG, SVG</p>
                       <div class="dropzone-wrapper">
                         <div class="dropzone-left">
                           <svg
@@ -168,7 +168,7 @@
 
                     <li class="dropzone-item _grey-border-bottom">
                       <h3>Афиша *</h3>
-                      <p>А4 альбомн. или книж., JPEG, PNG, SVG</p>
+                      <p class="dropzone-aspectratio">А4 альбомн. или книж., JPEG, PNG, SVG</p>
                       <div class="dropzone-wrapper">
                         <div class="dropzone-left">
                           <svg
@@ -222,7 +222,7 @@
 
                     <li class="dropzone-item">
                       <h3>Картинка для сайта</h3>
-                      <p>соотношение сторон 16:10, JPEG, PNG</p>
+                      <p class="dropzone-aspectratio">соотношение сторон 16:10, JPEG, PNG</p>
                       <div class="dropzone-wrapper">
                         <div class="dropzone-left">
                           <svg
@@ -344,7 +344,34 @@
                   <p class="foto-galery-title">Фотогалерея (<span>0</span>/10)</p>               
                   <div class="dropzone-previews"></div>
                   <p class="galery-download dropzone-hide"></p>
-                    <button class="foto-gallery-button btn-add-logo" type="button">Добавить фото</button>
+
+                    <button
+                    class="" 
+                    type="button"
+                    data-template="new-location"
+                    data-btn="add"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="15"
+                        height="0.7"
+                        transform="matrix(0 -1 0.999995 0.00305792 7 15)"
+                        fill="black"
+                      />
+                      <path
+                        d="M15.002 8L0.00195408 8L-0.000186465 7.3L14.9998 7.3L15.002 8Z"
+                        fill="black"
+                      />
+                    </svg>
+                    Добавить фото
+                  </button>
+
                   </p>
                 </div>
 
