@@ -6,6 +6,27 @@
         &.column {
           flex-direction: column;
         }
+
+        input {
+          //border: 3px solid red;
+          width: 517px;
+          font-size: 14px;
+
+          &::placeholder {
+            font-size: 14px;
+          }
+        }
+
+        .custom-checkbox {
+          margin-left: 6px;
+        }
+
+        .custom-date,
+        .phone-mask {
+          //border: 3px solid green;
+          max-width: 204px;
+          // margin-right: 20px;
+        }
       }
 
       &__wrapper {

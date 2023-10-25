@@ -94,7 +94,7 @@ if (docsDropZones) {
       thumbnailHeight: 108,
       acceptedFiles: '.pdf',
       addRemoveLinks: true,
-      dictRemoveFile: 'Удалить',
+      dictRemoveFile: '',
       clickable: addDocButton,
       previewsContainer: docContainer,
     });

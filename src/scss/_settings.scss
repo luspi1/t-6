@@ -123,12 +123,25 @@ textarea {
   display: none;
 }
 
+.air-datepicker {
+  border: 1px solid #113770 !important;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+  border-radius: 3px !important;
+}
+
+.air-datepicker-nav--title {
+  font-size: 13px;
+  font-weight: 400;
+}
+
 .air-datepicker-body--day-name {
   color: #817D8C;
-  @include montserrat-medium;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: lowercase;
+  text-transform: capitalize;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .swiper-button-disabled {
@@ -137,12 +150,18 @@ textarea {
   opacity: 0.55 !important;
 }
 
-.air-datepicker-cell.-day- {
-  @include montserrat-medium;
-  font-size: 16px;
-  line-height: 20px;
-  color: #000000;
+.air-datepicker-nav--title i {
+  color: inherit;
 }
+
+.air-datepicker-cell.-day- {
+  font-family: 'OpenSans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+}
+
 
 .air-datepicker-global-container {
   z-index: 9900;
@@ -330,6 +349,11 @@ textarea {
   .big-form__date-wrapper {
     width: 100%;
   }
+}
+
+
+.choices__list--dropdown .choices__placeholder {
+  display: none;
 }
 
 // растягивание формы на странице Списки до конца блока

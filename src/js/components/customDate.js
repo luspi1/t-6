@@ -7,6 +7,16 @@ const initAllDates = () => {
     allDateInputs.forEach((el) => {
       const customDate = new AirDatepicker(el, {
         container: el.closest('.modal') ? '.date-custom-container' : '',
+        minDate: new Date(),
+        disableNavWhenOutOfRange: true,
+
+        navTitles: {
+          days: 'MMMM yyyy',
+        },
+
+        showOtherMonths: false,
+
+        onSelect: () => console.log(customDate),
       });
 
       el.addEventListener('click', (e) => {

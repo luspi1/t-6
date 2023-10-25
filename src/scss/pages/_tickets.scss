@@ -64,7 +64,7 @@
 
     >.custom-checkbox {
       &:not(:last-child) {
-        margin-right: 18px;
+        margin-right: 22px;
       }
     }
   }
@@ -78,7 +78,7 @@
   }
 
   &__wrapper {
-    width: 45%;
+   // width: 45%;
 
     &.quantity {
       width: 150px;
@@ -99,7 +99,7 @@
   }
 
   &__entry-wrapper {
-    gap: 20px;
+    gap: 40px;
     padding-top: 15px;
     display: none;
 
@@ -162,5 +162,124 @@
     &:not(:last-child) {
       margin-right: 15px;
     }
+  }
+}
+
+.tickets {
+
+  .big-form {
+    display: flex;
+    flex-direction: column;
+
+    &__buttons {
+      
+      margin-top: auto;
+    }
+
+    &__tickets-show {
+      //border: 3px solid red;
+      padding-top: 5px;
+    }
+  }
+
+  .custom-checkbox input:checked + .add {
+    border: 3px solid red;
+  }
+
+  .big-form__title-description {
+    //border: 3px solid red;
+    margin-bottom: 15px;
+  }
+
+  .big-form__list {
+    padding: 16px 23px;
+
+    .big-form__item {
+      margin-bottom: 15px; 
+    }
+  }
+
+  .big-form__list h3 {
+    margin-bottom: 13px;
+  }
+
+  .big-form__wrapper {
+    // border: 3px solid red;
+
+
+
+    input {
+      &::placeholder {
+        color: #000;
+
+        font-size: 14px;
+
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .short-input {
+      width: 150px;
+    }
+  }
+
+  .big-form__description {
+    font-size: 14px;
+
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  // .big-form__item {
+  //   margin-bottom: 15px;
+  // }
+
+  h4 {
+    font-size: 14px;
+
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .big-form__locations {
+    //border: 3px solid red;
+    width: auto;
+    margin-right: 45px;
+  }
+
+  .big-form__entry-item {
+    margin: 0;
+  }
+
+  .big-form__entry-list label {
+    font-size: 14px;
+
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .area-label {
+    font-size: 14px;
+
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .area-description {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .big-form__wrapper .area{
+   
+      .big-form__description {
+        width: auto;
+        border: 3px solid red;
+      }
+      
+    
   }
 }

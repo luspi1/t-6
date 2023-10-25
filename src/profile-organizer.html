@@ -308,6 +308,7 @@
                         </div>
                         <div class="big-form__input-min">
                           <input
+                            class="short-input"
                             name="place"
                             type="text"
                             placeholder="указать населенный пункт"
@@ -321,8 +322,11 @@
                       искалось в списках
                     </p>
                   </li>
-                  <li class="big-form__item _border-bottom column">
-                    <h3>Логотип *</h3>
+                  <!-- <li
+                    class="big-form__item _border-bottom column"
+                    style="border: 3px solid orange"
+                  >
+                    <h3>Аватар *</h3>
                     <p>соотношение сторон 1:1 или 1:2, JPEG, PNG, SVG</p>
                     <div class="big-form__dropzone-wrapper" id="profile-logo">
                       <div class="big-form__dropzone-left">
@@ -375,8 +379,64 @@
                         </button>
                       </div>
                     </div>
+                  </li> -->
+                  <li class="dropzone-item _grey-border-bottom">
+                    <h3>Аватар *</h3>
+                    <p class="dropzone-aspectratio">
+                      соотношение сторон 1:1 или 3:4, JPEG, PNG
+                    </p>
+
+                    <div class="dropzone-wrapper">
+                      <div class="dropzone-left">
+                        <svg
+                          width="30"
+                          height="21"
+                          viewBox="0 0 30 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M27.9213 0H2.07723C0.930008 0 0 0.930008 0 2.07723V18.8413C0 19.9885 0.930008 20.9186 2.07723 20.9186H27.9213C29.0685 20.9186 29.9985 19.9885 29.9985 18.8413V2.07723C29.9985 0.930008 29.0685 0 27.9213 0Z"
+                            fill="#F3F5F6"
+                          />
+                          <path
+                            d="M9.94062 8.59761C11.3824 8.59761 12.5512 7.42884 12.5512 5.98707C12.5512 4.54531 11.3824 3.37653 9.94062 3.37653C8.49886 3.37653 7.33008 4.54531 7.33008 5.98707C7.33008 7.42884 8.49886 8.59761 9.94062 8.59761Z"
+                            fill="#292F35"
+                          />
+                          <path
+                            d="M8.78937 8.33005C9.59531 8.33005 10.2487 7.28107 10.2487 5.98709C10.2487 4.69312 9.59531 3.64414 8.78937 3.64414C7.98342 3.64414 7.33008 4.69312 7.33008 5.98709C7.33008 7.28107 7.98342 8.33005 8.78937 8.33005Z"
+                            fill="#C6C6C6"
+                          />
+                          <path
+                            d="M18.5482 20.9186H1.96335C1.44269 20.9184 0.943398 20.7115 0.575234 20.3433C0.207071 19.9752 0.000164949 19.4759 0 18.9552V15.3739L4.77427 12.0172C5.03395 11.8349 5.34439 11.7388 5.66166 11.7426C5.97893 11.7464 6.28698 11.8499 6.54222 12.0384L18.5482 20.9186Z"
+                            fill="#C6C6C6"
+                          />
+                          <path
+                            d="M21.8726 9.09296L30.001 14.0048V18.891C30.0009 19.4288 29.7871 19.9445 29.4068 20.3247C29.0265 20.7049 28.5107 20.9185 27.973 20.9185H3.73633L18.547 9.29831C19.0151 8.93081 19.5838 8.71435 20.1778 8.67767C20.7718 8.64099 21.3629 8.78583 21.8726 9.09296Z"
+                            fill="#292F35"
+                          />
+                        </svg>
+                        <p class="dropzone-hide">
+                          Перетащите изображение<br />
+                          на это поле
+                        </p>
+                      </div>
+                      <div class="dropzone-right">
+                        <p>
+                          Файл
+                          <span class="dropzone-hide">еще не загружен</span>
+                        </p>
+                        <p class="dropzone-hide">
+                          Перетащите его на поле слева или нажмите на ссылку
+                        </p>
+                        <div class="dropzone-previews"></div>
+                        <button class="btn-add-logo" type="button">
+                          Загрузить
+                        </button>
+                      </div>
+                    </div>
                   </li>
-                  <li class="big-form__item">
+                  <li class="big-form__item area-block">
                     <div class="big-form__wrapper">
                       <label>Подробное описание *</label>
                       <textarea
@@ -389,7 +449,7 @@
                       Подробное описание организатора в нескольких фразах.
                     </p>
                   </li>
-                  <li class="big-form__item _border-bottom">
+                  <li class="big-form__item _border-bottom area-block">
                     <div class="big-form__wrapper">
                       <label>Отрасли деятельности *</label>
                       <textarea
@@ -428,7 +488,7 @@
                     </div>
                     <p class="big-form__description">
                       Ваш контактный e-mail. Рекомендуем не применять один и тот
-                      же и как логин и как контактный
+                      же и как логин, и как контактный
                     </p>
                   </li>
                   <li class="big-form__item">

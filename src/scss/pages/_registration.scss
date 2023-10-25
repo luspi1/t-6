@@ -3,13 +3,30 @@
 
     .big-form {
 
+      .big-form__wrapper {
+
+        input {
+          width: 204px;
+        }
+
+        .custom-select {
+          width: 204px;
+        }
+      }
+
+      &__item {
+        margin-bottom: 0px;
+      }
+
       &__show-wrapper {
+        padding-top: 5px;
 
         >h4 {
-          margin-bottom: 12px;
-          padding-top: 20px;
-          font-size: 15px;
-          font-weight: 500;
+          margin-top: 18px;
+          margin-bottom: 8px;
+          font-size: 14px;
+
+          font-weight: 600;
           line-height: normal;
         }
 
@@ -19,6 +36,7 @@
 
         >.custom-checkbox {
           margin-bottom: 20px;
+
         }
 
         &._active {
@@ -26,18 +44,46 @@
             display: block;
           }
         }
+
+        h5 {
+          margin-top: 20px;
+
+          font-size: 14px;
+          font-weight: 600;
+          line-height: normal;
+          margin-bottom: 6px;
+        }
+
+
+        .registration-form-settings {
+          column-gap: 20px;
+
+          .registration-form-settings-item {
+            margin-bottom: 12px;
+
+            label {
+              font-size: 14px;
+              line-height: normal;
+            }
+
+            .required-input {
+              margin-left: 5px;
+            }
+          }
+        }
       }
 
       &__list {
-        padding: 30px 24px;
+        padding: 20px 24px 2px 25px;
         border-radius: 5px;
         border: 1px dashed #868585;
         background: #F0F2F3;
         display: none;
+        margin-bottom: 20px;
       }
 
       &__commands {
-        padding-top: 20px;
+        padding-top: 18px;
         display: none;
       }
 
@@ -46,21 +92,42 @@
         margin-bottom: 20px;
 
         .big-form__wrapper {
-          width: 370px;
+          margin-right: 9px;
+
+          label {
+            //border: 3px solid red;
+          }
+        }
+
+        label {
+          margin-bottom: 4px;
+          //border: 3px solid red;
+        }
+
+        input {
+          //border: 3px solid blue;
+          min-width: 370px;
         }
 
         >p {
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 2.8;
-          height: 35px;
+
+
+
+
+          //border: 3px solid yellow;
+          margin-left: 10px;
+          margin-bottom: 8px;
+
+          font-size: 14px;
+          font-weight: 400;
+          line-height: normal;
         }
 
         >p,
         .custom-select,
         .big-form__command-btn-dropzone {
-          margin-top: 24px;
-          margin-right: 10px;
+          // margin-top: 24px;
+          // margin-right: 10px;
         }
 
         &.dz-max-files-reached {
@@ -72,6 +139,37 @@
         }
 
         &.command-dropzone {
+
+          // border: 3px solid pink;
+
+          input {
+            &::placeholder {
+
+              font-size: 14px;
+
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+
+          .custom-select option {
+            color: red;
+          }
+
+          .custom-select .choices__inner {
+            font-size: 14px;
+
+            font-weight: 400;
+            //line-height: normal;
+
+
+          }
+
+          display: flex;
+          align-items: flex-end;
+          margin-bottom: 18px;
+
+
           .dz-preview {
             display: flex;
             align-items: center;
@@ -119,20 +217,32 @@
       }
 
       &__command-btn-dropzone {
-        color: $blue;
-        font-size: 13px;
-        font-weight: 500;
+
+        //border: 3px solid red;
+        padding: 0;
+
+        color: #113770;
+
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
         line-height: normal;
       }
 
       &__btn-add-command {
         width: max-content;
         height: 35px;
-        padding: 0 10px;
+        padding: 0 15px;
         border-radius: 3px;
         border: 1px solid #868585;
         align-items: center;
         display: none;
+
+        //border: 3px solid red;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
       }
 
       &__btn-delete-command {
@@ -154,6 +264,9 @@
             display: flex;
           }
         }
+
+        //border: 3px solid red;
+        margin-top: 20px;
       }
 
       &__item {
@@ -173,6 +286,8 @@
             margin-bottom: 20px;
           }
         }
+
+        padding-left: 3px;
       }
 
       &__checkboxes {
@@ -191,6 +306,7 @@
           >label {
             font-size: 13px;
             font-weight: 500;
+            // border: 3px solid green;
           }
 
           &:not(:last-child) {

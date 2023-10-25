@@ -1,0 +1,86 @@
+.create-event {
+    .big-form {
+        input {
+            width: 517px;
+
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+
+        .custom-date {
+            width: 204px;
+        }
+
+        ._border-bottom {
+            padding-bottom: 28px;
+            margin-bottom: 20px;
+        }
+
+
+        &__main-list {
+            margin-bottom: 31px;
+        }
+    }
+
+    .big-form__wrapper {
+        width: 517px;
+
+        .custom-select {
+            width: 254px;
+
+            &:not(:last-child) {
+                margin-right: 9px;
+            }
+        }
+
+        .short-input {
+            width: 254px;
+        }
+    }
+
+    .big-form__main-list {
+
+        .event-description {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .participation {
+            margin-bottom: 12px;
+        }
+    }
+
+
+
+    .creation-platform {
+        //border: 3px solid red;
+        margin-top: 10px;
+        font-size: 14px;
+
+        font-weight: 400;
+        line-height: normal;
+        padding-bottom: 25px;
+
+        .big-form__btn-new-place {
+            font-size: 14px;
+
+            font-weight: 600;
+            padding: 0;
+        }
+    }
+
+    .big-form__buttons {
+
+        padding-top: 30px;
+    }
+
+
+
+
+
+
+
+
+
+}

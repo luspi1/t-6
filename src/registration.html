@@ -63,9 +63,10 @@
                       name="openRegVisitor"
                       id="openRegVisitor"
                       data-show-list
+                    
                     />
                     <label for="openRegVisitor"
-                      >Включить регистрацию посетителей</label
+                      >Открыть регистрацию посетителей</label
                     >
                   </div>
                   <ul class="big-form__list">
@@ -96,11 +97,11 @@
                           </div>
                           <div class="custom-select _time">
                             <select name="timeStart">
-                              <option value>чч.мм</option>
-                              <option value="1">12:00</option>
-                              <option value="2">12:30</option>
-                              <option value="2">13:00</option>
-                              <option value="2">13:30</option>
+                              <option value="" selected>чч.мм</option>
+                              <option value="1">15:00</option>
+                              <option value="2">15:30</option>
+                              <option value="2">16:00</option>
+                              <option value="2">17:30</option>
                             </select>
                           </div>
                         </div>
@@ -155,7 +156,7 @@
                           </div>
                           <div class="custom-select _time">
                             <select name="timeStart">
-                              <option value>чч.мм</option>
+                              <option value="" selected>чч.мм</option>
                               <option value="1">12:00</option>
                               <option value="2">12:30</option>
                               <option value="2">13:00</option>
@@ -165,9 +166,10 @@
                         </div>
                       </div>
                     </li>
-                    <li class="big-form__item sb">
+                    <li><h5>Настройки формы регистрации посетителей</h5></li>
+                    <li class="big-form__item sb registration-form-settings">
                       <ul class="big-form__checkboxes">
-                        <li>
+                        <li class="registration-form-settings-item">
                           <label>Поле «Фамилия»</label>
                           <div class="df">
                             <div class="custom-checkbox">
@@ -179,7 +181,7 @@
                               />
                               <label for="lastNameActive">Активное поле</label>
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="lastNameReq"
@@ -190,7 +192,7 @@
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li class="registration-form-settings-item">
                           <label>Поле «Имя»</label>
                           <div class="df">
                             <div class="custom-checkbox">
@@ -202,7 +204,7 @@
                               />
                               <label for="nameActive">Активное поле</label>
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="nameReq"
@@ -213,7 +215,7 @@
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li class="registration-form-settings-item">
                           <label>Поле «Отчество»</label>
                           <div class="df">
                             <div class="custom-checkbox">
@@ -225,7 +227,7 @@
                               />
                               <label for="surNameActive">Активное поле</label>
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="surNameReq"
@@ -236,7 +238,7 @@
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li class="registration-form-settings-item">
                           <label>Поле «Позывной или прозвище»</label>
                           <div class="df">
                             <div class="custom-checkbox">
@@ -248,7 +250,7 @@
                               />
                               <label for="nicknameActive">Активное поле</label>
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="nicknameReq"
@@ -259,7 +261,7 @@
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li class="registration-form-settings-item">
                           <label>Поле «Город или регион»</label>
                           <div class="df">
                             <div class="custom-checkbox">
@@ -271,7 +273,7 @@
                               />
                               <label for="cityActive">Активное поле</label>
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="cityReq"
@@ -284,7 +286,7 @@
                         </li>
                       </ul>
                       <ul class="big-form__checkboxes">
-                        <li>
+                        <li class="registration-form-settings-item">
                           <label>Поле «Номер телефона»</label>
                           <div class="df">
                             <div class="custom-checkbox">
@@ -296,7 +298,7 @@
                               />
                               <label for="phoneActive">Активное поле</label>
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="phoneReq"
@@ -307,7 +309,7 @@
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li class="registration-form-settings-item">
                           <label>Поле «E-mail»</label>
                           <div class="df">
                             <div class="custom-checkbox">
@@ -319,7 +321,7 @@
                               />
                               <label for="emailActive">Активное поле</label>
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="emailReq"
@@ -330,7 +332,7 @@
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li class="registration-form-settings-item">
                           <label>Выбор типа допуска или билета</label>
                           <div class="df">
                             <div class="custom-checkbox">
@@ -344,7 +346,7 @@
                                 >Активное поле</label
                               >
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="typeTicketReq"
@@ -357,8 +359,8 @@
                             </div>
                           </div>
                         </li>
-                        <li>
-                          <label>Поле «Номер телефона»</label>
+                        <li class="registration-form-settings-item">
+                          <label>Выбор типа посетителя</label>
                           <div class="df">
                             <div class="custom-checkbox">
                               <input
@@ -371,7 +373,7 @@
                                 >Активное поле</label
                               >
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="typeVisitorReq"
@@ -386,7 +388,7 @@
                         </li>
                       </ul>
                       <ul class="big-form__checkboxes">
-                        <li>
+                        <li class="registration-form-settings-item">
                           <label>Регистрация групп</label>
                           <div class="df">
                             <div class="custom-checkbox">
@@ -398,7 +400,7 @@
                               />
                               <label for="groupAllow">Разрешить</label>
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="groupReq"
@@ -409,7 +411,7 @@
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li class="registration-form-settings-item">
                           <label>Регистрация транспортных средств</label>
                           <div class="df">
                             <div class="custom-checkbox">
@@ -421,7 +423,7 @@
                               />
                               <label for="regCarAllow">Разрешить</label>
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="regCarReq"
@@ -509,8 +511,9 @@
                       name="openReg"
                       id="openReg"
                       data-show-list
+                      
                     />
-                    <label for="openReg">Включить регистрацию участников</label>
+                    <label for="openReg">Открыть регистрацию участников</label>
                   </div>
                   <ul class="big-form__list">
                     <li class="big-form__item mb0">
@@ -540,7 +543,7 @@
                           </div>
                           <div class="custom-select _time">
                             <select name="timeStart">
-                              <option value>чч.мм</option>
+                              <option value="" selected>чч.мм</option>
                               <option value="1">12:00</option>
                               <option value="2">12:30</option>
                               <option value="2">13:00</option>
@@ -599,7 +602,7 @@
                           </div>
                           <div class="custom-select _time">
                             <select name="timeStart">
-                              <option value>чч.мм</option>
+                              <option value="" selected>чч.мм</option>
                               <option value="1">12:00</option>
                               <option value="2">12:30</option>
                               <option value="2">13:00</option>
@@ -617,6 +620,7 @@
                           type="checkbox"
                           name="severalMembers"
                           id="severalMembers"
+                          checked
                         />
                         <label for="severalMembers"
                           >Несколько сторон участников</label
@@ -643,13 +647,16 @@
                               <option value="2">цвет 2</option>
                             </select>
                           </div>
-                          <p>или</p>
-                          <button
-                            class="big-form__command-btn-dropzone"
-                            type="button"
-                          >
-                            загрузить пиктограмму
-                          </button>
+                          <p>
+                            или
+
+                            <button
+                              class="big-form__command-btn-dropzone"
+                              type="button"
+                            >
+                              загрузить пиктограмму
+                            </button>
+                          </p>
                         </li>
                         <li class="big-form__command command-dropzone">
                           <div class="big-form__wrapper">
@@ -667,14 +674,44 @@
                               <option value="2">цвет 2</option>
                             </select>
                           </div>
-                          <p>или</p>
-                          <button
-                            class="big-form__command-btn-dropzone"
-                            type="button"
-                          >
-                            загрузить пиктограмму
-                          </button>
+                          <p>
+                            или
+
+                            <button
+                              class="big-form__command-btn-dropzone"
+                              type="button"
+                            >
+                              загрузить пиктограмму
+                            </button>
+                          </p>
                         </li>
+                        <!-- <li class="big-form__command command-dropzone">
+                          <div class="big-form__wrapper">
+                            <label>Название стороны</label>
+                            <input
+                              name="nameCommand"
+                              placeholder="ввести название"
+                              type="text"
+                            />
+                          </div>
+                          <div class="custom-select">
+                            <select name="colorCommand">
+                              <option value="0">выбрать цвет</option>
+                              <option value="1">цвет 1</option>
+                              <option value="2">цвет 2</option>
+                            </select>
+                          </div>
+                          <p>
+                            или
+
+                            <button
+                              class="big-form__command-btn-dropzone"
+                              type="button"
+                            >
+                              загрузить пиктограмму
+                            </button>
+                          </p>
+                        </li> -->
                       </ul>
                       <button
                         class="big-form__btn-add-command"
@@ -685,7 +722,345 @@
                         Добавить еще одну сторону
                       </button>
                     </li>
-                    <li class="big-form__item sb">
+                    <li><h5>Настройки формы регистрации посетителей</h5></li>
+                    <li class="big-form__item sb registration-form-settings">
+                      <ul class="big-form__checkboxes">
+                        <li class="registration-form-settings-item">
+                          <label>Поле «Фамилия»</label>
+                          <div class="df">
+                            <div class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="lastNameActive"
+                                id="lastNameActive"
+                                data-show-checkbox
+                              />
+                              <label for="lastNameActive">Активное поле</label>
+                            </div>
+                            <div class="custom-checkbox required-input">
+                              <input
+                                type="checkbox"
+                                name="lastNameReq"
+                                id="lastNameReq"
+                                disabled
+                              />
+                              <label for="lastNameReq">Обязательное поле</label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="registration-form-settings-item">
+                          <label>Поле «Имя»</label>
+                          <div class="df">
+                            <div class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="nameActive"
+                                id="nameActive"
+                                data-show-checkbox
+                              />
+                              <label for="nameActive">Активное поле</label>
+                            </div>
+                            <div class="custom-checkbox required-input">
+                              <input
+                                type="checkbox"
+                                name="nameReq"
+                                id="nameReq"
+                                disabled
+                              />
+                              <label for="nameReq">Обязательное поле</label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="registration-form-settings-item">
+                          <label>Поле «Отчество»</label>
+                          <div class="df">
+                            <div class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="surNameActive"
+                                id="surNameActive"
+                                data-show-checkbox
+                              />
+                              <label for="surNameActive">Активное поле</label>
+                            </div>
+                            <div class="custom-checkbox required-input">
+                              <input
+                                type="checkbox"
+                                name="surNameReq"
+                                id="surNameReq"
+                                disabled
+                              />
+                              <label for="surNameReq">Обязательное поле</label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="registration-form-settings-item">
+                          <label>Поле «Позывной или прозвище»</label>
+                          <div class="df">
+                            <div class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="nicknameActive"
+                                id="nicknameActive"
+                                data-show-checkbox
+                              />
+                              <label for="nicknameActive">Активное поле</label>
+                            </div>
+                            <div class="custom-checkbox required-input">
+                              <input
+                                type="checkbox"
+                                name="nicknameReq"
+                                id="nicknameReq"
+                                disabled
+                              />
+                              <label for="nicknameReq">Обязательное поле</label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="registration-form-settings-item">
+                          <label>Поле «Город или регион»</label>
+                          <div class="df">
+                            <div class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="cityActive"
+                                id="cityActive"
+                                data-show-checkbox
+                              />
+                              <label for="cityActive">Активное поле</label>
+                            </div>
+                            <div class="custom-checkbox required-input">
+                              <input
+                                type="checkbox"
+                                name="cityReq"
+                                id="cityReq"
+                                disabled
+                              />
+                              <label for="cityReq">Обязательное поле</label>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul class="big-form__checkboxes">
+                        <li class="registration-form-settings-item">
+                          <label>Поле «Номер телефона»</label>
+                          <div class="df">
+                            <div class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="phoneActive"
+                                id="phoneActive"
+                                data-show-checkbox
+                              />
+                              <label for="phoneActive">Активное поле</label>
+                            </div>
+                            <div class="custom-checkbox required-input">
+                              <input
+                                type="checkbox"
+                                name="phoneReq"
+                                id="phoneReq"
+                                disabled
+                              />
+                              <label for="phoneReq">Обязательное поле</label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="registration-form-settings-item">
+                          <label>Поле «E-mail»</label>
+                          <div class="df">
+                            <div class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="emailActive"
+                                id="emailActive"
+                                data-show-checkbox
+                              />
+                              <label for="emailActive">Активное поле</label>
+                            </div>
+                            <div class="custom-checkbox required-input">
+                              <input
+                                type="checkbox"
+                                name="emailReq"
+                                id="emailReq"
+                                disabled
+                              />
+                              <label for="emailReq">Обязательное поле</label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="registration-form-settings-item">
+                          <label>Выбор типа допуска или билета</label>
+                          <div class="df">
+                            <div class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="typeTicketActive"
+                                id="typeTicketActive"
+                                data-show-checkbox
+                              />
+                              <label for="typeTicketActive"
+                                >Активное поле</label
+                              >
+                            </div>
+                            <div class="custom-checkbox required-input">
+                              <input
+                                type="checkbox"
+                                name="typeTicketReq"
+                                id="typeTicketReq"
+                                disabled
+                              />
+                              <label for="typeTicketReq"
+                                >Обязательное поле</label
+                              >
+                            </div>
+                          </div>
+                        </li>
+                        <li class="registration-form-settings-item">
+                          <label>Выбор типа посетителя</label>
+                          <div class="df">
+                            <div class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="typeVisitorActive"
+                                id="typeVisitorActive"
+                                data-show-checkbox
+                              />
+                              <label for="typeVisitorActive"
+                                >Активное поле</label
+                              >
+                            </div>
+                            <div class="custom-checkbox required-input">
+                              <input
+                                type="checkbox"
+                                name="typeVisitorReq"
+                                id="typeVisitorReq"
+                                disabled
+                              />
+                              <label for="typeVisitorReq"
+                                >Обязательное поле</label
+                              >
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul class="big-form__checkboxes">
+                        <li class="registration-form-settings-item">
+                          <label>Регистрация групп</label>
+                          <div class="df">
+                            <div class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="groupAllow"
+                                id="groupAllow"
+                                data-show-checkbox
+                              />
+                              <label for="groupAllow">Разрешить</label>
+                            </div>
+                            <div class="custom-checkbox required-input">
+                              <input
+                                type="checkbox"
+                                name="groupReq"
+                                id="groupReq"
+                                disabled
+                              />
+                              <label for="groupReq">Обязательно</label>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="registration-form-settings-item">
+                          <label>Регистрация транспортных средств</label>
+                          <div class="df">
+                            <div class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="regCarAllow"
+                                id="regCarAllow"
+                                data-show-checkbox
+                              />
+                              <label for="regCarAllow">Разрешить</label>
+                            </div>
+                            <div class="custom-checkbox required-input">
+                              <input
+                                type="checkbox"
+                                name="regCarReq"
+                                id="regCarReq"
+                                disabled
+                              />
+                              <label for="regCarReq">Обязательно</label>
+                            </div>
+                          </div>
+                          <ul class="big-form__cars">
+                            <li>
+                              <div class="custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  name="carBrand"
+                                  id="carBrand"
+                                  disabled
+                                />
+                                <label for="carBrand"
+                                  >Марка (ВАЗ, Skoda, KIA...)</label
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  name="carModel"
+                                  id="carModel"
+                                  disabled
+                                />
+                                <label for="carModel"
+                                  >Модель (21083, Rapid, K5...)</label
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  name="carNumber"
+                                  id="carNumber"
+                                  disabled
+                                />
+                                <label for="carNumber"
+                                  >Госномер (вместе с регионом)</label
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  name="carColor"
+                                  id="carColor"
+                                  disabled
+                                />
+                                <label for="carColor">Цвет автомобиля</label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="custom-checkbox">
+                                <input
+                                  type="checkbox"
+                                  name="carType"
+                                  id="carType"
+                                  disabled
+                                />
+                                <label for="carType"
+                                  >Тип Т/С (легковая, автобус...)</label
+                                >
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- <li
+                      class="big-form__item sb"
+                      style="border: 3px solid firebrick"
+                    >
                       <ul class="big-form__checkboxes">
                         <li>
                           <label>Поле «Фамилия»</label>
@@ -701,7 +1076,7 @@
                                 >Активное поле</label
                               >
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="memberLastNameReq"
@@ -728,7 +1103,7 @@
                                 >Активное поле</label
                               >
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="memberNameReq"
@@ -755,7 +1130,7 @@
                                 >Активное поле</label
                               >
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="memberSurNameReq"
@@ -782,7 +1157,7 @@
                                 >Активное поле</label
                               >
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="memberNicknameReq"
@@ -809,7 +1184,7 @@
                                 >Активное поле</label
                               >
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="memberCityReq"
@@ -838,7 +1213,7 @@
                                 >Активное поле</label
                               >
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="memberPhoneReq"
@@ -865,7 +1240,7 @@
                                 >Активное поле</label
                               >
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="memberEmailReq"
@@ -892,7 +1267,7 @@
                                 >Активное поле</label
                               >
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="memberTypeTicketReq"
@@ -919,7 +1294,7 @@
                                 >Активное поле</label
                               >
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="typeMemberReq"
@@ -946,7 +1321,7 @@
                               />
                               <label for="memberGroupAllow">Разрешить</label>
                             </div>
-                            <div class="custom-checkbox">
+                            <div class="custom-checkbox required-input">
                               <input
                                 type="checkbox"
                                 name="memberGroupReq"
@@ -1048,7 +1423,7 @@
                           </ul>
                         </li>
                       </ul>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
 
@@ -1083,10 +1458,13 @@
             <option value="2">цвет 2</option>
           </select>
         </div>
-        <p>или</p>
-        <button class="big-form__command-btn-dropzone" type="button">
-          загрузить пиктограмму
-        </button>
+        <p>
+          или
+          <button class="big-form__command-btn-dropzone" type="button">
+            загрузить пиктограмму
+          </button>
+        </p>
+
         <button
           class="big-form__btn-delete-command"
           type="button"

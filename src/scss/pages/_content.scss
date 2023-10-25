@@ -1,22 +1,45 @@
 .content-page {
     .event {
+        .big-form__title-description {
+            // border-bottom: 1px solid #E3DDDD;
+            margin-bottom: 22px;
+        }
 
         .big-form {
+
+            &__title-description {
+                margin: 0;
+            }
+
             &__show-wrapper {
-                >h4 {
-                    margin-bottom: 12px;
-                    padding-top: 20px;
-                    font-size: 15px;
-                    font-style: normal;
-                    font-weight: 500;
+                h3 {
+                    font-size: 14px;
+                    font-weight: 600;
                     line-height: normal;
-                    border-top: 1px solid #E3DDDD;
                 }
 
-                >p {
-                    margin-bottom: 20px;
-
+                .dropzone-aspectratio {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: normal;
                 }
+
+                .dropzone-left {
+
+                    //border: 3px solid red;
+                    p {
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+
+                .dropzone-right {
+                    //border: 3px solid yellow;
+                    max-width: 195px;
+                }
+
 
                 >.custom-checkbox {
                     margin-bottom: 20px;
@@ -158,6 +181,7 @@
             }
 
             &__item {
+
                 &.sb {
                     justify-content: space-between;
                     gap: 10px;
@@ -213,23 +237,22 @@
                     margin-top: 5px;
                 }
             }
-
-
         }
-
     }
 }
 
 .content-page {
     .documents {
         border-top: 1px solid #E3DDDD;
-        padding: 30px 0;
+        padding: 20px 0 25px 0;
         width: 100%;
         display: flex;
         flex-direction: column;
 
+        border-bottom: 1px solid #E3DDDD;
+
         input {
-            margin-top: 8px;
+            margin-top: 5px;
             width: 100%;
             padding: 9px;
             border: 1px solid #E3DDDD;
@@ -237,8 +260,9 @@
             border-radius: 3px;
 
             &::placeholder {
-                font-size: 13px;
-                line-height: 16px;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: normal;
             }
         }
     }
@@ -248,33 +272,50 @@
     .document-item {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        gap: 18px;
+        //align-items: center;
+        align-items: flex-start;
+        gap: 15px;
+
+        //border: 3px solid saddlebrown;
 
         .input-container {
             width: 100%;
-            max-width: 520px;
+            min-width: 520px;
+
+            font-size: 14px;
+
+            font-weight: 400;
+            line-height: normal;
+
+            label {
+                font-size: 14px;
+            }
         }
 
         &:not(:last-child) {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .dropzone-previews {
             * {
-                font-size: 13px;
+                font-size: 14px;
+            }
+
+            .dz-details {
+                max-width: 215px;
             }
 
             .dz-filename {
-                @include montserrat-regular;
-                font-size: 13px;
-                line-height: 16px;
-
-                color: #064AB1;
+                color: #113770;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
             }
 
             .dz-remove {
                 position: relative;
+
 
                 &::after {
                     position: absolute;
@@ -282,7 +323,8 @@
                     width: 12px;
                     height: 12px;
 
-                    right: -17px;
+
+                    right: 0px;
                     top: 7px;
 
                     background-image: url('data:image/svg+xml,<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.75215 6.00018L11.8447 0.90761C12.0526 0.699769 12.0526 0.363358 11.8447 0.155518C11.6369 -0.0518392 11.3005 -0.0518392 11.0926 0.155518L6.00006 5.24809L0.907972 0.155518C0.700132 -0.0518392 0.363721 -0.0518392 0.15588 0.155518C-0.0514767 0.363358 -0.0514767 0.699769 0.15588 0.90761L5.24845 6.00018L0.15588 11.0923C-0.0519601 11.3001 -0.0519601 11.6365 0.15588 11.8444C0.2598 11.9483 0.395622 12 0.531926 12C0.668231 12 0.804052 11.9483 0.907972 11.8444L6.00054 6.75179L11.0931 11.8444C11.197 11.9483 11.3329 12 11.4692 12C11.6055 12 11.7413 11.9483 11.8452 11.8444C12.053 11.6365 12.053 11.3001 11.8452 11.0923L6.75215 6.00018Z" fill="black"/></svg>');
@@ -297,40 +339,48 @@
     .document-dropzone {
         width: 100%;
 
+        //border: 3px solid rebeccapurple;
+        margin-bottom: 5px;
     }
 
     .document-download {
         padding-bottom: 5px;
         max-width: 350px;
-        margin-top: 30px;
-        font-size: 13px;
+        color: #91969A;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
 
         button {
-            @include montserrat-regular;
-            font-size: 13px;
-            color: #064AB1;
+            padding: 0;
+            color: #113770;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: normal;
         }
     }
 
     .foto-galery {
-        border-top: 1px solid #E3DDDD;
-        padding: 29px 0;
+        padding: 28px 0 12px 0;
 
         .foto-galery-title {
-            @include montserrat-semibold;
+            font-size: 14px;
 
-            font-size: 13px;
-            line-height: 16px;
+            font-weight: 600;
+            line-height: normal;
         }
 
         button {
-            padding: 9px;
-            border: 1px solid #868585;
-            border-radius: 3px;
-            font-family: 'Montserrat';
-            font-weight: 400;
-            font-size: 13px;
-            line-height: 16px;
+            padding: 0;
+            color: #113770;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+            svg {
+                margin-right: 5px;
+            }
         }
 
         .dropzone-previews {

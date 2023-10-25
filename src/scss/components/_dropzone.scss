@@ -3,10 +3,13 @@
     width: 50%;
     padding-top: 15px;
 
+
+
     p {
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 400;
         line-height: normal;
+
     }
 
     &.dz-max-files-reached {
@@ -125,14 +128,18 @@
 }
 
 .dropzone-right {
-    max-width: 225px;
+    max-width: 200px;
     display: flex;
     flex-direction: column;
 
+
+
     p {
+        font-size: 13px;
+
         &:last-of-type {
-            margin-top: auto;
-            margin-bottom: 9px;
+            //margin-top: auto;
+            margin-bottom: 19px;
         }
 
     }
@@ -152,7 +159,20 @@
 }
 
 .dropzone-item {
-    padding: 30px 0;
+    padding: 10px 0 30px 0;
+    font-size: 14px;
+    line-height: normal;
+
+    h3 {
+        font-size: 14px;
+        font-weight: 600;
+
+    }
+
+    .dropzone-aspectratio {
+        //border: 3px solid red;
+        font-weight: 400;
+    }
 }
 
 .documents {
