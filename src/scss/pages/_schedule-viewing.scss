@@ -1,7 +1,12 @@
 .schedule-viewing-page {
     .schedule-viewing-button {
         padding: 8px 12px;
-        display: inline-block;
+        width: max-content;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         max-height: 35px;
         border-radius: 3px;
         border: 1px solid #113770;
